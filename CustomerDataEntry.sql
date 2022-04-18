@@ -39,4 +39,44 @@ INSERT INTO T4_Vehicle VALUES
 ('200013','100010','093234',A,B,700000   ,'Sedan'    ,80 ,4,'Skoda'      ,293472,346732,C,'1AS1243676'),
 ('200014','100011','734534',A,B,400000   ,'Sedan'    ,40 ,4,'Mustang'    ,490234,736242,C,'2LF4345234'),
 ('200015','100012','324945',A,B,1200000  ,'Hatchback',43 ,5,'Hyundai'    ,234643,264343,C,'4PC2375563'),
-('200016','100013','435035',A,B,5000000  ,'Sports'   ,140,2,'Mercedes'   ,023432,123041,C,'1QU3342342'),
+('200016','100013','435035',A,B,5000000  ,'Sports'   ,140,2,'Mercedes'   ,023432,123041,C,'1QU3342342');
+
+INSERT INTO T4_Application VALUES
+('300001', '100001', '200001', 'Pending', 'Third-Party Liability Only Cover'),
+('300002', '100002', '200002', 'Pending', 'Collision Damage or Own Damage (OD) Cover'),
+('300003', '100003', '200003', 'Pending', 'Personal Accident Cover:'),
+('300004', '100004', '200004', 'Resolved', 'Personal Accident Cover:'),
+('300005', '100005', '200005', 'Pending', 'Comprehensive Car Insurance'),
+('300006', '100006', '200006', 'Resolved', 'Zero Depreciation Insurance:'),
+('300007', '100007', '200007', 'Resolved', 'Comprehensive Car Insurance'),
+('300008', '100008', '200008', 'Pending', 'Comprehensive Car Insurance'),
+('300009', '100008', '200009', 'Resolved', 'Zero Depreciation Insurance:'),
+('300010', '100009', '200010', 'Resolved', 'Third-Party Liability Only Cover'),
+('300011', '100009', '200011', 'Pending', 'Collision Damage or Own Damage (OD) Cover'),
+('300012', '100009', '200012', 'Resolved', 'Comprehensive Car Insurance'),
+('300013', '100010', '200013', 'Resolved', 'Zero Depreciation Insurance:'),
+('300014', '100011', '200014', 'Resolved', 'Third-Party Liability Only Cover'),
+('300015', '100012', '200015', 'Pending', 'Personal Accident Cover:'),
+('300016', '100013', '200016', 'Resolved', 'Collision Damage or Own Damage (OD) Cover');
+
+
+-- Department Name = Departmentid
+-- Policy Number Values from 101 onwards
+-- Description to be added
+INSERT INTO T4_Insurance_policy VALUES
+('400001', '300001', '100001', NULL, '101', '2010-01-01', '2011-01-01', NULL),
+('400002', '300002', '100002', NULL, '102', '2009-02-01', '2010-02-01', NULL),
+('400003', '300003', '100003', NULL, '103', '2015-03-01', '2016-03-01', NULL),
+('400004', '300004', '100004', NULL, '104', '2013-04-01', '2014-04-01', NULL),
+('400005', '300005', '100005', NULL, '105', '2018-05-01', '2019-05-01', NULL),
+('400006', '300006', '100006', NULL, '106', '2019-06-01', '2020-06-01', NULL),
+('400007', '300007', '100007', NULL, '107', '2011-07-01', '2012-07-01', NULL),
+('400008', '300008', '100008', NULL, '108', '2018-08-01', '2019-08-01', NULL),
+('400009', '300009', '100008', NULL, '109', '2017-09-01', '2018-09-01', NULL),
+('400010', '300010', '100009', NULL, '110', '2016-10-01', '2017-10-01', NULL),
+('400011', '300011', '100009', NULL, '111', '2014-11-01', '2015-11-01', NULL),
+('400012', '300012', '100009', NULL, '112', '2012-12-01', '2013-12-01', NULL),
+('400013', '300013', '100010', NULL, '113', '2020-01-01', '2021-01-01', NULL),
+('400014', '300014', '100011', NULL, '114', '2019-02-01', '2020-02-01', NULL),
+('400015', '300015', '100012', NULL, '115', '2008-03-01', '2009-03-01', NULL),
+('400001', '300016', '100013', NULL, '116', '2016-04-01', '2017-04-01', NULL);
