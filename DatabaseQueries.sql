@@ -88,3 +88,33 @@ GROUP BY T4_Vehicle.Cust_id
 HAVING COUNT(T4_Vehicle.Cust_id) > 1;
 
 -- THE WHERE STATEMENT CAN BE REPLACED TO SEARCH USING DATE IF NEEDED
+
+-- 5
+-- Select all vehicles which have premium more than its vehicle number
+-- Premium Payments are linked on the Customer and not vehicles???????
+-- Diskushun Riqvirud
+
+
+-- 6
+-- Retrieve Customer details whose Claim Amount is less than Coverage Amount and Claim
+-- Amount is greater than Sum of (CLAIM_SETTLEMENT_ID, VEHICLE_ID, CLAIM_ID, CUST_ID)
+
+SELECT T4_Customer.*
+FROM T4_Customer
+INNER JOIN T4_Vehicle
+ON T4_Vehicle.Cust_id = T4_Customer.CUST_ID
+INNER JOIN T4_Claim
+ON T4_Claim.CLAIM_ID = T4_Customer.CUST_ID
+INNER JOIN T4_Insurance_policy
+ON T4_Insurance_policy.Cust_id = T4_Customer.CUST_ID
+INNER JOIN T4_Insurance_Policy_Coverage
+ON T4_Insurance_Policy_Coverage.AGREEMENT_ID = T4_Insurance_policy.Agreement_id
+INNER JOIN T4_Coverage
+ON T4_Coverage.COVERAGE_ID = T4_Insurance_Policy_Coverage.COVERAGE_ID
+INNER JOIN T4_Claim_Settlement
+ON T4_Claim_Settlement.CLAIM_ID = T4_Claim.CLAIM_ID
+WHERE T4_Claim.CLAIM_AMOUNT < T4_Coverage.COVERAGE_AMOUNT
+AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID AS UNSIGNED) + 
+                                    CAST(T4_Vehicle.VEHICLE_ID AS UNSIGNED) +
+                                    CAST(T4_Claim.CLAIM_ID AS UNSIGNED) +
+                                    CAST(T4_Customer.CUST_ID AS UNSIGNED));
