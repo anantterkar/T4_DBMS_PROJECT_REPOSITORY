@@ -100,7 +100,7 @@ INNER JOIN T4_Customer
 ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
 INNER JOIN T4_Premium_Payment
 ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-WHERE CAST(T4_Vehicle.Vehicle_id AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
+WHERE CAST(T4_Vehicle.Vehicle_number AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
 
 -- 6
 -- Retrieve Customer details whose Claim Amount is less than Coverage Amount and Claim
