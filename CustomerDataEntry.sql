@@ -97,6 +97,57 @@ INSERT INTO T4_Insurance_policy VALUES
 ('400001', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
 
 
+INSERT INTO T4_Incident VALUES
+('500001','Fire','2011-10-03','Sparks from tear in the electric wiring systems are not covered in insurance');
+('500002','Theft','2003-10-07','Insurers will pay an amount equal to declared value of insured bike in case of theft.');
+('500003','Collision Coverage','2004-08-23','100% of the sum insured is offered on the accidental death of the insured person.');
+('500004','Lightning','2006-08-15','Under The policy of Standard Fire and Special Perils Policy Coverage you can claim the Damage coverages');
+('500005','Faulty ignition','2006-11-14','Third-party car insurance cover will pay for any fiscal liability');
+('500006','External explosion','2008-05-23','Most home and contents insurance covers you for damage caused by fire, including bushfire');
+('500007','Burglary','2009-10-15', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.');
+('500008','Wildfire','2012-03-02', 'Insurance contract safeguards the insured against unforeseen contingency caused by accidental fire, lightning, explosion/implosion, destruction or damage caused by aerial devices, man made perils');
+('500009','Mechanical breakdown','2014-01-07','Equipment breakdown coverage.');
+('500010','Drunk Driving victim','2014-01-20','Driving under the influence of alcohol or drugs is illegal obviously');
+('500011','Natural disaster','2014-11-21','A comprehensive car insurance policy provides coverage against damages or losses caused due to almost all natural disasters');
+('500012','Auto liability coverage','2015-04-09','Liability insurance is a part of the general insurance system of risk financing');
+('500013','Floods Damage','2015-11-17', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.');
+('500014','Comprehensive Insurance','2016-04-04','provides the minimal required coverage of losses related to a third-party.');
+('500015','Aggravated damage','2017-07-28','Aggravated damages are the special and highly exceptional damages awarded on a defendant by a court');
+
+INSERT INTO T4_Incident_Report  VALUES
+('600001','500001','100001','Anand',25000,'Fire','Shortcircuit in console');                            
+('600002','500002','100002','Satish',400000,'Theft','Stolen');
+('600003','500003','100003','Zaid',18000,'Collision Coverage','Bumper damaged in collision');
+('600004','500004','100004','Reha',35000,'Lightning','Car hit by lightning');
+('600005','500005','100005','Ayush',21000,'Faulty ignition','The car has a malfunctioning ignition');
+('600006','500006','100006','Srishti',80000,'External explosion','Vehicle caught fire and exploded ');
+('600007','500007','100007','Shikha',100000,'Burglary','Parts stolen');
+('600008','500008','100008','Ajith',500000,'Wildfire','Vehicle damaged in wildfire');
+('600009','500009','100009','Mayank',55000,'Mechanical breakdown','Axle broke down');
+('600010','500010','100010','Hitesh',89000,'Drunk Driving victim','Drunk driver crashed and caused damage');
+('600011','500011','100011','Kamal',2500000,'Natural disaster','Damaged in a cyclone');
+('600012','500012','100012','Jagandeep',250000,'Auto liability coverage','Vehicle caused damage to other vehicles');
+('600013','500013','100013','Shanu',1500000,'Floods Damage','Submerged car does not start');
+('600014','500014','100014','Ajmal',250000,'Comprehensive Insurance','Insurance plan that covers the insured person against both, own damages and any third party liabilities');
+('600015','500015','100015','Sundar',17000,'Aggravated damage','Vehicle damaged by jilted lover');
+
+INSERT INTO T4_Premium_Payment VALUES 
+('700001' ,'100001', 23235345 ,   '2013-12-23' , 400000 ,  30901 );
+('700002' ,'100002', 34423423 ,   '2019-11-20' , 32000 ,    30907);
+('700003' ,'100003', 342355325 ,  '2013-02-25' , 520000 ,   30903  );
+('700004' ,'100004', 4542334 ,    '2019-05-15' , 400000 ,  30904  );
+('700005' ,'100005', 3434235 ,    '2013-04-13' , 52000 ,    30905  );
+('700006' ,'100006', 86575745 ,   '2019-04-21' , 400000 ,   30906  );
+('700007' ,'100007', 74576547 ,   '2013-09-11' , 3800000 ,  30907  );
+('700008' ,'100008', 3432443535 , '2019-09-24' , 400000 ,  30908  );
+('700009' ,'100009', 34234234434 ,'2013-08-12' , 360000 ,  30909  );
+('700010' ,'100010', 534324 ,     '2019-01-23' , 2800000 , 30910  );
+('700011' ,'100011', 342343434 ,  '2013-11-17' , 220000 ,  30911  );
+('700012' ,'100012', 87686867 ,   '2019-12-14' , 380000 ,   30912  );
+('700013' ,'100013', 767455436 ,  '2013-10-06' , 280000 ,  30913  );
+('700014' ,'100014', 6547554 ,    '2019-10-09' , 4000000 ,  30914  );
+('700015' ,'100015', 84567546 ,   '2013-05-02' , 3500000 , 30915  );
+
 -- T4_Claim
 INSERT INTO T4_Claim VALUES
 ('110001', '100001', '400001', 50000, 'INCIDENT_ID', 'Vandalism', '2020-10-01', 'Approved'),
@@ -136,22 +187,22 @@ INSERT INTO T4_Claim_Settlement
 
 
 -- T4_Incident
-INSERT INTO T4_Incident
-('130001', 'Fire', '2020-01-02', 'Sparks from tear in the electric wiring systems are not covered in insurance'),
-('130002', 'Theft', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
-('130003', 'Collision Coverage', '2020-01-02', '100% of the sum insured is offered on the accidental death of the insured person.'),
-('130004', 'Lightning', '2020-01-02', 'Under The policy of Standard Fire and Special Perils Policy Coverage you can claim the Damage coverages'),
-('130005', 'Faulty ignition', '2020-01-02', 'Third-party car insurance cover will pay for any fiscal liability'),
-('130006', 'External explosion', '2020-01-02', 'Most home and contents insurance covers you for damage caused by fire, including bushfire'),
-('130007', 'Burglary', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
-('130008', 'Wildfire', '2020-01-02', 'Insurance contract safeguards the insured against unforeseen contingency caused by accidental fire, lightning, explosion/implosion, destruction or damage caused by aerial devices, man made perils'),
-('130009', 'Mechanical breakdown', '2020-01-02', 'Equipment breakdown coverage.'),
-('130010', 'Drunk Driving victim', '2020-01-02', 'Driving under the influence of alcohol or drugs is illegal obviously'),
-('130011', 'Natural disaster', '2020-01-02', 'A comprehensive car insurance policy provides coverage against damages or losses caused due to almost all natural disasters'),
-('130012', 'Auto liability coverage', '2020-01-02', 'Liability insurance is a part of the general insurance system of risk financing'),
-('130013', 'Floods Damage', '2020-01-02', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.'),
-('130014', 'Comprehensive Insurance', '2020-01-02', 'provides the minimal required coverage of losses related to a third-party.'),
-('130015', 'Aggravated damage', '2020-01-02', 'Aggravated damages are the special and highly exceptional damages awarded on a defendant by a court');
+-- INSERT INTO T4_Incident
+-- ('130001', 'Fire', '2020-01-02', 'Sparks from tear in the electric wiring systems are not covered in insurance'),
+-- ('130002', 'Theft', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+-- ('130003', 'Collision Coverage', '2020-01-02', '100% of the sum insured is offered on the accidental death of the insured person.'),
+-- ('130004', 'Lightning', '2020-01-02', 'Under The policy of Standard Fire and Special Perils Policy Coverage you can claim the Damage coverages'),
+-- ('130005', 'Faulty ignition', '2020-01-02', 'Third-party car insurance cover will pay for any fiscal liability'),
+-- ('130006', 'External explosion', '2020-01-02', 'Most home and contents insurance covers you for damage caused by fire, including bushfire'),
+-- ('130007', 'Burglary', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+-- ('130008', 'Wildfire', '2020-01-02', 'Insurance contract safeguards the insured against unforeseen contingency caused by accidental fire, lightning, explosion/implosion, destruction or damage caused by aerial devices, man made perils'),
+-- ('130009', 'Mechanical breakdown', '2020-01-02', 'Equipment breakdown coverage.'),
+-- ('130010', 'Drunk Driving victim', '2020-01-02', 'Driving under the influence of alcohol or drugs is illegal obviously'),
+-- ('130011', 'Natural disaster', '2020-01-02', 'A comprehensive car insurance policy provides coverage against damages or losses caused due to almost all natural disasters'),
+-- ('130012', 'Auto liability coverage', '2020-01-02', 'Liability insurance is a part of the general insurance system of risk financing'),
+-- ('130013', 'Floods Damage', '2020-01-02', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.'),
+-- ('130014', 'Comprehensive Insurance', '2020-01-02', 'provides the minimal required coverage of losses related to a third-party.'),
+-- ('130015', 'Aggravated damage', '2020-01-02', 'Aggravated damages are the special and highly exceptional damages awarded on a defendant by a court');
 
 
 -- T4_Receipt
