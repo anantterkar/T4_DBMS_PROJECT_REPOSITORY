@@ -138,8 +138,23 @@ INSERT INTO T4_Claim_Settlement
 ('120015', '110015', '100015', '200015', '2020-11-24', 20000, 'COVERAGE_ID'); --!!!!
 
 
-INSERT INTO T4_Vehicle_Service
-()
+-- T4_Incident
+INSERT INTO T4_Incident
+('130001', 'Fire', '2020-01-02', 'Sparks from tear in the electric wiring systems are not covered in insurance'),
+('130002', 'Theft', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+('130003', 'Collision Coverage', '2020-01-02', '100% of the sum insured is offered on the accidental death of the insured person.'),
+('130004', 'Lightning', '2020-01-02', 'Under The policy of Standard Fire and Special Perils Policy Coverage you can claim the Damage coverages'),
+('130005', 'Faulty ignition', '2020-01-02', 'Third-party car insurance cover will pay for any fiscal liability'),
+('130006', 'External explosion', '2020-01-02', 'Most home and contents insurance covers you for damage caused by fire, including bushfire'),
+('130007', 'Burglary', '2020-01-02', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+('130008', 'Wildfire', '2020-01-02', 'Insurance contract safeguards the insured against unforeseen contingency caused by accidental fire, lightning, explosion/implosion, destruction or damage caused by aerial devices, man made perils'),
+('130009', 'Mechanical breakdown', '2020-01-02', 'Equipment breakdown coverage.'),
+('130010', 'Drunk Driving victim', '2020-01-02', 'Driving under the influence of alcohol or drugs is illegal obviously'),
+('130011', 'Natural disaster', '2020-01-02', 'A comprehensive car insurance policy provides coverage against damages or losses caused due to almost all natural disasters'),
+('130012', 'Auto liability coverage', '2020-01-02', 'Liability insurance is a part of the general insurance system of risk financing'),
+('130013', 'Floods Damage', '2020-01-02', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.'),
+('130014', 'Comprehensive Insurance', '2020-01-02', 'provides the minimal required coverage of losses related to a third-party.'),
+('130015', 'Aggravated damage', '2020-01-02', 'Aggravated damages are the special and highly exceptional damages awarded on a defendant by a court');
 
 
 -- Product ID Not Added
