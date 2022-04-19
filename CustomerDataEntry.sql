@@ -62,6 +62,18 @@ INSERT INTO T4_Application VALUES
 ('300015', '100012', '200015', 'Accepted', 'Personal Accident Cover:'),
 ('300016', '100013', '200016', 'Accepted', 'Collision Damage or Own Damage (OD) Cover');
 
+INSERT INTO T4_Department VALUES
+('Sales Dept',NULL, NULL, '9587462587', '','Udit'),
+('R&D Dept',NULL, NULL, '9752145698', '','Prateek'),
+('Accounts Dept',NULL, NULL, '9658742165', '','Anant'),
+('HR Dept',NULL, NULL, '7896584256', '','Amit'),
+('Admin Dept',NULL, NULL, '8457963215', '','Rohit'),
+('Maintainence Dept',NULL, NULL, '8699547125', '','Rahul'),
+('Production Dept',NULL, NULL, '9987458216', '','Pratham'),
+('Finance Dept ',NULL, NULL, '9876586215', '','Kapil'),
+('Operations Dept',NULL, NULL, '7856548236', '','Modi'),
+('Purchase Dept',NULL, NULL, '9987458625', '','Pramod'),
+('Project Dept',NULL, NULL, '7854956523', '','Ram');
 
 -- Department Name = Departmentid From 201 - 204
 -- Policy Number Values from 101 - 109
@@ -83,21 +95,6 @@ INSERT INTO T4_Insurance_policy VALUES
 ('400014', '300014', '100011', 'Finance Dept ', '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
 ('400015', '300015', '100012', 'Maintainence Dept', '105', '2008-03-01', '2009-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
 ('400001', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
-
-
--- Not done yet
-INSERT INTO T4_Department VALUES
-('Sales Dept',NULL, NULL, '9587462587', '','Udit'),
-('R&D Dept',NULL, NULL, '9752145698', '','Prateek'),
-('Accounts Dept',NULL, NULL, '9658742165', '','Anant'),
-('HR Dept',NULL, NULL, '7896584256', '','Amit'),
-('Admin Dept',NULL, NULL, '8457963215', '','Rohit'),
-('Maintainence Dept',NULL, NULL, '8699547125', '','Rahul'),
-('Production Dept',NULL, NULL, '9987458216', '','Pratham'),
-('Finance Dept ',NULL, NULL, '9876586215', '','Kapil'),
-('Operations Dept',NULL, NULL, '7856548236', '','Modi'),
-('Purchase Dept',NULL, NULL, '9987458625', '','Pramod'),
-('Project Dept',NULL, NULL, '7854956523', '','Ram');
 
 
 -- T4_Claim
