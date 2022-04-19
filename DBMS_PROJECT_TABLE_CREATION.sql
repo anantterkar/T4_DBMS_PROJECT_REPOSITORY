@@ -136,13 +136,13 @@ CREATE TABLE IF NOT EXISTS T4_Department (
 
 CREATE TABLE IF NOT EXISTS T4_Office (
     Office_name VARCHAR(20) PRIMARY KEY,
+	Office_leader VARCHAR(20),
+	Contact_information VARCHAR(20),
+	 Address VARCHAR(20),
+	Admin_cost INT,
+	Staff VARCHAR(50),
     Department_name VARCHAR(20), -- FOREIGN KEY ------
     Company_name VARCHAR(20), -- FOREIGN KEY ------
-    Office_leader VARCHAR(20),
-    Contact_information VARCHAR(20),
-    Address VARCHAR(20),
-    Admin_cost INT,
-    Staff VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS T4_Vehicle_service (
