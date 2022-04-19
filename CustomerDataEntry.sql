@@ -67,22 +67,22 @@ INSERT INTO T4_Application VALUES
 -- Policy Number Values from 101 - 109
 -- Description to be added
 INSERT INTO T4_Insurance_policy VALUES
-('400001', '300001', '100001', 201, '101', '2010-01-01', '2011-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400002', '300002', '100002', 202, '102', '2009-02-01', '2010-02-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
-('400003', '300003', '100003', 203, '103', '2015-03-01', '2016-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400004', '300004', '100004', 201, '104', '2013-04-01', '2014-04-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400005', '300005', '100005', 202, '103', '2018-05-01', '2019-05-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
-('400006', '300006', '100006', 203, '106', '2019-06-01', '2020-06-01', 'Coverage against loss of or damage to your vehicle caused by natural calamities'),
-('400007', '300007', '100007', 202, '107', '2011-07-01', '2012-07-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400008', '300008', '100008', 203, '104', '2018-08-01', '2019-08-01', 'Liability Coverage'),
-('400009', '300009', '100008', 204, '105', '2017-09-01', '2018-09-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400010', '300010', '100009', 204, '109', '2016-10-01', '2017-10-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
-('400011', '300011', '100009', 201, '108', '2014-11-01', '2015-11-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400012', '300012', '100009', 202, '102', '2012-12-01', '2013-12-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
-('400013', '300013', '100010', 201, '103', '2020-01-01', '2021-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400014', '300014', '100011', 203, '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
-('400015', '300015', '100012', 203, '105', '2008-03-01', '2009-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400001', '300016', '100013', 204, '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
+('400001', '300001', '100001', 'Sales Dept', '101', '2010-01-01', '2011-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400002', '300002', '100002', 'R&D Dept', '102', '2009-02-01', '2010-02-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
+('400003', '300003', '100003', 'Accounts Dept', '103', '2015-03-01', '2016-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400004', '300004', '100004', 'Sales Dept', '104', '2013-04-01', '2014-04-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400005', '300005', '100005', 'Operations Dept', '103', '2018-05-01', '2019-05-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
+('400006', '300006', '100006', 'Accounts Dept', '106', '2019-06-01', '2020-06-01', 'Coverage against loss of or damage to your vehicle caused by natural calamities'),
+('400007', '300007', '100007', 'R&D Dept', '107', '2011-07-01', '2012-07-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400008', '300008', '100008', 'Maintainence Dept', '104', '2018-08-01', '2019-08-01', 'Liability Coverage'),
+('400009', '300009', '100008', 'Operations Dept', '105', '2017-09-01', '2018-09-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400010', '300010', '100009', 'Purchase Dept', '109', '2016-10-01', '2017-10-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
+('400011', '300011', '100009', 'Production Dept', '108', '2014-11-01', '2015-11-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400012', '300012', '100009', 'R&D Dept', '102', '2012-12-01', '2013-12-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
+('400013', '300013', '100010', 'Sales Dept', '103', '2020-01-01', '2021-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400014', '300014', '100011', 'Finance Dept ', '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
+('400015', '300015', '100012', 'Maintainence Dept', '105', '2008-03-01', '2009-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400001', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
 
 
 -- Not done yet
