@@ -148,6 +148,59 @@ INSERT INTO T4_Premium_Payment VALUES
 ('700014' ,'100014', 6547554 ,    '2019-10-09' , 4000000 ,  30914  );
 ('700015' ,'100015', 84567546 ,   '2013-05-02' , 3500000 , 30915  );
 
+
+INSERT INTO T4_Coverage VALUES 
+('800001', 410000, 'Liability', 'HIGH', NULL, 'When accident takes place before your fault', '1 Year', 'Birla Sun Vehicle Insurance Company Limited'),
+('800002', 520000, 'Collision', 'HIGH', NULL, 'Bear your car repair expenses after the accident', '8 Months', 'ICICI Prudential Vehicle Insurance Company Limited'),
+('800003', 630000, 'Personal Injury', 'LOW', NULL,  'Personal injury protection will cover all the costs associated with the accident', '8 Months', 'Birla Sun Vehicle Insurance Company Limited'),
+('800004', 400000, 'Liability', 'LOW', NULL, 'When accident takes place before your fault', '2 Years', 'Canara HSBC Oriental Bank of Commerce LIC Limited'),
+('800005', 150000, 'Comprehensive', 'LOW', NULL, 'Includes all kinds of risk factors that are associated with your vehicle, driver, passengers, third-party vehicle, third-party driver, third-party vehicle passengers and third-party property', '8 Months', 'DLF Pramerica Vehicle Insurance Company Limited'),
+('800006', 160000, 'Personal Injury', 'HIGH', NULL, 'Personal injury protection will cover all the costs associated with the accident', '13 Months', 'Max Vehicle Insurance Company Limited'),
+('800007', 170000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '18 Months', 'Birla Sun Vehicle Insurance Company Limited'),
+('800008', 180000, 'Collision', 'MEDIUM', NULL, 'Bear your car repair expenses after the accident', '15 Months', 'Exide Vehicle Insurance Company Limited'),
+('800009', 190000, 'Personal Injury', 'LOW', NULL, 'Personal injury protection will cover all the costs associated with the accident', '5 Months', 'Birla Sun Vehicle Insurance Company Limited'),
+('800010', 199000, 'Comprehensive', 'LOW', NULL, 'Include all kinds of risk factors that are associated with your vehicle, driver, passengers, third-party vehicle, third-party driver, third-party vehicle passengers and third-party property', '8 Months', 'Future Generali India Vehicle Insurance Company Limited'),
+('800011', 123000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '1 Year', 'Kotak Vehicle Insurance Company Limited'),
+('800012', 156000, 'Collision', 'MEDIUM', NULL, 'Bear your car repair expenses after the accident', '1 Months', 'Kotak Vehicle Insurance Company Limited'),
+('800013', 543000, 'Liability', 'HIGH', NULL, 'When accident takes place before your fault', '3 Years', 'Bharti AXA Vehicle Insurance Company Limited'),
+('800014', 687000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '1 Year', 'Aviva Vehicle Insurance Company Limited'),
+('800015', 653000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '18 Months', 'Aegon Vehicle Insurance Company Limited');
+
+INSERT INTO T4_Product values
+('900001', '40000','Bike Insurance/Two Wheeler','Birla Sun Vehicle Insurance Company Limited' ),
+('900002', '120000','Car Insurance', 'Kotak Vehicle Insurance Company Limited'),
+('900003', '20000','Two Wheeler-Economy','Kotak Vehicle Insurance Company Limited' ),
+('900004', '80000','Car Insurance-Economy','Birla Sun Vehicle Insurance Company Limited' ),
+('900005', '90000','Two Wheeler-Luxury', 'Kotak Vehicle Insurance Company Limited'),
+('900006', '200000','Car Insurance-Luxury', 'Kotak Vehicle Insurance Company Limited'),
+('900007', '4000','Two Wheeler- Topup', 'Birla Sun Vehicle Insurance Company Limited'),
+('900008', '1000','Two Wheeler- Topup Economy','Canara HSBC Oriental Bank of Commerce LIC Limited' ),
+('900009', '10000','Car Insurance-Topup', 'Aegon Vehicle Insurance Company Limited'),
+('900010', '40000','Bike Insurance/Two Wheeler', 'Kotak Vehicle Insurance Company Limited'),
+('900011', '40000','Bike Insurance/Two Wheeler','Birla Sun Vehicle Insurance Company Limited' ),
+('900012', '40000','Bike Insurance/Two Wheeler', 'DLF Pramerica Vehicle Insurance Company Limited'),
+('900013', '40000','Car Insurance-Economy','IDBI Federal Vehicle Insurance Company Limited' ),
+('900014', '40000','Electric Vehicle Insurance', 'Birla Sun Vehicle Insurance Company Limited'),
+('900015', '40000','Bike Insurance/Two Wheeler', 'Canara HSBC Oriental Bank of Commerce LIC Limited');
+
+ 
+INSERT INTO T4_Office VALUES 
+('Bhatt Limited', 'Vishesh Bhatt', '1212121212', 'Lucknow', '1200000','31501', 'Sales  Dept', '30506', 'Kotak Vehicle Insurance Company Limited'),
+('Reddy Co', 'Srinivas Reddy', '2323232323', 'Bangalore', '1300000','31502','R&D Dept', '30506', 'Kotak Vehicle Insurance Company Limited'),
+('Ali inc', 'Lucky Ali', '5858585858', 'Bangalore', '1400000','31503', 'Accounts Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
+('Sharma and Sons', 'Shubham Sharma', '3131311333', 'Jabalpur', '1500000','31504','HR Dept', '30507','Aegon Vehicle Insurance Company Limited'),
+('Pathak Limited', 'Deeksha Pathak', '4747474747', 'Mumbai', '1600000','31505', 'Admin Dept', '30501', ' Bajaj Allianz Vehicle Insurance Company Limited'),
+('Rai Co', 'Balwant Rai', '3245678541', 'Mumbai', '1700000','31506', 'Maintainence  Dept', '30510', ' Canara HSBC Oriental Bank of Commerce LIC Limited'),
+('Raj and sons', 'Krishna Raj', '8769543211', 'Pune', '1800000','31507', 'Production  Dept', '30502', 'Birla Sun Vehicle Insurance Company Limited'),
+('Bandhu Private Limited', 'Rama Bandhu', '2341675897', 'Hyderbad', '1900000','31508', 'Finance  Dept', '30502', 'Birla Sun Vehicle Insurance Company Limited'),
+('Preeti LLC', 'Preeti Rai', '9876987652', 'Hyderbad', '1100000','31509', 'Operations  Dept', '30510', ' Canara HSBC Oriental Bank of Commerce LIC Limited'),
+('Kamal Inc', 'Kamal Kaushik', '4356273891', 'Delhi', '1000000','31510', 'Purchase  Dept', '30507', 'Canara HSBC Oriental Bank of Commerce LIC Limited'),
+('Singh Limited', 'Rai Singh', '678781155', 'Pune', '1250000','31511', 'Project  Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
+('Dhvani LLC', 'Dhvani Krishna', '98483356733', 'Lucknow', '1340000','31512', 'Sales Dept', '30515', 'HDFC Vehicle Insurance Company Limited'),
+('Davar Co', 'Shaimak Davar', '8900678456', 'Chennai', '1780000','31513', 'Accounts Dept', '30501', ' Bajaj Allianz Vehicle Insurance Company Limited'),
+('Bista Inc', 'Jay Bista', '5678904357', 'Bangalore', '1560000','31514', 'Maintainence  Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
+('Nikita and Sons', 'Nikita Rai', '9090887766', 'Bangalore', '1650000','31515', 'Finance Dept', '30515', 'Future Generali India Vehicle Insurance Company Limited');
+
 -- T4_Claim
 INSERT INTO T4_Claim VALUES
 ('110001', '100001', '400001', 50000, 'INCIDENT_ID', 'Vandalism', '2020-10-01', 'Approved'),
