@@ -2,6 +2,7 @@ USE T4_Car_Insurance_DB;
 
 -- DROP DATABASE T4_Car_Insurance_DB;
 
+-- Customer ID values from 100001 - 100015
 INSERT INTO T4_Customer VALUES
 ('100001', 'John', 'Cusack', '1990-01-01', 'M', 'Maharashtra, India', 943204482, 'johnc@gmail.com', 'A00001', 'Married', 10001),
 ('100002', 'Octavia', 'Blake', '1991-01-02', 'F', 'Orissa, India', 981584022, 'octaviab@gmail.com', 'B00002', 'Single', 10002),
@@ -23,6 +24,7 @@ INSERT INTO T4_Customer VALUES
 -- LOOK AT THE QUERY STATEMENTS BEFORE DECIDING THE VALUES A,B,C
 -- ENSURE THAT USER WITH ID 100008 and 9 have NOT paid their premium policy
 -- VEHICLE NUMBER TO BE INSERTED AFTER STUDYING QUERY 5
+-- Vehicle id from 200001 - 200016
 INSERT INTO T4_Vehicle VALUES
 ('200001','100001','205834',A,B,1400000  ,'SUV'      ,60 ,6,'Morris Garages',239034,392618,C,'2LX1876789'),
 ('200002','100002','243542',A,B,1000000  ,'Sedan'    ,40 ,4,'Hyundai'    ,942618,563810,C,'1MR5534254'),
@@ -41,42 +43,43 @@ INSERT INTO T4_Vehicle VALUES
 ('200015','100012','324945',A,B,1200000  ,'Hatchback',43 ,5,'Hyundai'    ,234643,264343,C,'4PC2375563'),
 ('200016','100013','435035',A,B,5000000  ,'Sports'   ,140,2,'Mercedes'   ,023432,123041,C,'1QU3342342');
 
+-- Application id Values from 300001 - 300016
 INSERT INTO T4_Application VALUES
 ('300001', '100001', '200001', 'Pending', 'Third-Party Liability Only Cover'),
-('300002', '100002', '200002', 'Pending', 'Collision Damage or Own Damage (OD) Cover'),
+('300002', '100002', '200002', 'Rejected', 'Collision Damage or Own Damage (OD) Cover'),
 ('300003', '100003', '200003', 'Pending', 'Personal Accident Cover:'),
-('300004', '100004', '200004', 'Resolved', 'Personal Accident Cover:'),
+('300004', '100004', '200004', 'Accepted', 'Personal Accident Cover:'),
 ('300005', '100005', '200005', 'Pending', 'Comprehensive Car Insurance'),
-('300006', '100006', '200006', 'Resolved', 'Zero Depreciation Insurance:'),
-('300007', '100007', '200007', 'Resolved', 'Comprehensive Car Insurance'),
+('300006', '100006', '200006', 'Accepted', 'Zero Depreciation Insurance:'),
+('300007', '100007', '200007', 'Accepted', 'Comprehensive Car Insurance'),
 ('300008', '100008', '200008', 'Pending', 'Comprehensive Car Insurance'),
-('300009', '100008', '200009', 'Resolved', 'Zero Depreciation Insurance:'),
-('300010', '100009', '200010', 'Resolved', 'Third-Party Liability Only Cover'),
+('300009', '100008', '200009', 'Accepted', 'Zero Depreciation Insurance:'),
+('300010', '100009', '200010', 'Accepted', 'Third-Party Liability Only Cover'),
 ('300011', '100009', '200011', 'Pending', 'Collision Damage or Own Damage (OD) Cover'),
-('300012', '100009', '200012', 'Resolved', 'Comprehensive Car Insurance'),
-('300013', '100010', '200013', 'Resolved', 'Zero Depreciation Insurance:'),
-('300014', '100011', '200014', 'Resolved', 'Third-Party Liability Only Cover'),
-('300015', '100012', '200015', 'Pending', 'Personal Accident Cover:'),
-('300016', '100013', '200016', 'Resolved', 'Collision Damage or Own Damage (OD) Cover');
+('300012', '100009', '200012', 'Rejected', 'Comprehensive Car Insurance'),
+('300013', '100010', '200013', 'Accepted', 'Zero Depreciation Insurance:'),
+('300014', '100011', '200014', 'Rejected', 'Third-Party Liability Only Cover'),
+('300015', '100012', '200015', 'Accepted', 'Personal Accident Cover:'),
+('300016', '100013', '200016', 'Accepted', 'Collision Damage or Own Damage (OD) Cover');
 
 
--- Department Name = Departmentid
--- Policy Number Values from 101 onwards
+-- Department Name = Departmentid From 201 - 204
+-- Policy Number Values from 101 - 109
 -- Description to be added
 INSERT INTO T4_Insurance_policy VALUES
-('400001', '300001', '100001', NULL, '101', '2010-01-01', '2011-01-01', NULL),
-('400002', '300002', '100002', NULL, '102', '2009-02-01', '2010-02-01', NULL),
-('400003', '300003', '100003', NULL, '103', '2015-03-01', '2016-03-01', NULL),
-('400004', '300004', '100004', NULL, '104', '2013-04-01', '2014-04-01', NULL),
-('400005', '300005', '100005', NULL, '105', '2018-05-01', '2019-05-01', NULL),
-('400006', '300006', '100006', NULL, '106', '2019-06-01', '2020-06-01', NULL),
-('400007', '300007', '100007', NULL, '107', '2011-07-01', '2012-07-01', NULL),
-('400008', '300008', '100008', NULL, '108', '2018-08-01', '2019-08-01', NULL),
-('400009', '300009', '100008', NULL, '109', '2017-09-01', '2018-09-01', NULL),
-('400010', '300010', '100009', NULL, '110', '2016-10-01', '2017-10-01', NULL),
-('400011', '300011', '100009', NULL, '111', '2014-11-01', '2015-11-01', NULL),
-('400012', '300012', '100009', NULL, '112', '2012-12-01', '2013-12-01', NULL),
-('400013', '300013', '100010', NULL, '113', '2020-01-01', '2021-01-01', NULL),
-('400014', '300014', '100011', NULL, '114', '2019-02-01', '2020-02-01', NULL),
-('400015', '300015', '100012', NULL, '115', '2008-03-01', '2009-03-01', NULL),
-('400001', '300016', '100013', NULL, '116', '2016-04-01', '2017-04-01', NULL);
+('400001', '300001', '100001', 201, '101', '2010-01-01', '2011-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400002', '300002', '100002', 202, '102', '2009-02-01', '2010-02-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
+('400003', '300003', '100003', 203, '103', '2015-03-01', '2016-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400004', '300004', '100004', 201, '104', '2013-04-01', '2014-04-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400005', '300005', '100005', 202, '103', '2018-05-01', '2019-05-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
+('400006', '300006', '100006', 203, '106', '2019-06-01', '2020-06-01', 'Coverage against loss of or damage to your vehicle caused by natural calamities'),
+('400007', '300007', '100007', 202, '107', '2011-07-01', '2012-07-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400008', '300008', '100008', 203, '104', '2018-08-01', '2019-08-01', 'Liability Coverage'),
+('400009', '300009', '100008', 204, '105', '2017-09-01', '2018-09-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400010', '300010', '100009', 204, '109', '2016-10-01', '2017-10-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
+('400011', '300011', '100009', 201, '108', '2014-11-01', '2015-11-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400012', '300012', '100009', 202, '102', '2012-12-01', '2013-12-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
+('400013', '300013', '100010', 201, '103', '2020-01-01', '2021-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400014', '300014', '100011', 203, '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
+('400015', '300015', '100012', 203, '105', '2008-03-01', '2009-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
+('400001', '300016', '100013', 204, '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
