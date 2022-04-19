@@ -158,9 +158,9 @@ CREATE TABLE IF NOT EXISTS T4_Vehicle_service (
 
 CREATE TABLE IF NOT EXISTS T4_Product (
     Product_number VARCHAR(20) PRIMARY KEY,
-    Company_name VARCHAR(20), -- FOREIGN KEY -----
     Product_price INT,
-    Product_type CHAR(15)
+    Product_type CHAR(15),
+    Company_name VARCHAR(20) -- FOREIGN KEY -----  
 );
 
 CREATE TABLE IF NOT EXISTS T4_Insurance_company (
