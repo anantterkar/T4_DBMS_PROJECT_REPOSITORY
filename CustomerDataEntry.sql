@@ -225,3 +225,19 @@ INSERT INTO T4_Insurance_company VALUES
 ('Kotak Vehicle Insurance Company Limited','Kotak Mahindra Vehicle Insurance Company Limited, Regd. Office: 2nd Floor, Plot # C- 12, G- Block, BKC, Bandra (E), Mumbai - 400 051',46598165,46598642,'KotakVehicleInsurance@help.com','KotakVehicleInsurance.com','Mumbai','kotakVehicleoffice','kotakVehicleoffice'),
 ('Max Vehicle Insurance Company Limited','Max Vehicle Insurance Co. Ltd., 3rd, 11th and 12th Floor, DLF Square Building, Jacaranda Marg, DLF City Phase II, Gurugram (Haryana) - 122002',97695577,50256720,'maxVehicle@help.com','maxVehicle.com','Gurugram','maxVehicleoffice','maxVehicleoffice');
 
+INSERT INTO T4_Vehicle_service VALUES
+('Engine Change', '200001', '100001', 'Sales dept', 'Pune', '92385102345', 'Poonam', 'AA'),
+('Body Paint', '200002','100002', 'R&D Dept', 'Mumbai', '92839529346', 'Shilpa', 'BB'),
+('AC Work', '200003', '100003', 'Accounts Dept', 'Kolkata', '9042368263', 'Preeti', 'CC'),
+('Chassis Replace', '200004', '100004', 'HR Dept', 'Delhi', '9206234819', 'Pooja', 'DD'),
+('Steering Change', '200005', '100005', 'Admin Dept', 'Tripura', '9105273912', 'Anant', 'EE'),
+('Rotate tires', '200006', '100006', 'Maintainence Dept', 'Orissa', '9205617289', 'Udit', 'FF'),
+('Oil filter', '200007', '100007', 'Production Dept', 'Himachal', '9081267673', 'Prateek', 'GG'),
+('Fuel Filter', '200008', '100008', 'Finance Dept', 'Kashmir', '8234510238', 'Pratham', 'HH'),
+('Battery Check', '200009', '100008', 'Operations Dept', 'Kolkata', '8293562396', 'Rohit', 'II'),
+('Body Paint', '200010', '100009', 'Purchase Dept', 'Gujurat', '72306283956', 'Rahul', 'JJ'),
+('Engine Change', '200011', '100009', 'Project Dept', 'Rajasthan', '7829357283', 'Tommy', 'KK'),
+('Engine Change', '200012', '100009', 'Admin Dept', 'Jaipur', '7788912351', 'Sakura', 'LL'),
+('Rotate tires', '200013', '100010', 'Maintainence Dept', 'Raipur', '9023231235', 'Rohan', 'MM'),
+('Battery Check', '200014', '100011', 'R&D Dept', 'Dhaka', '9023189122', 'Rooma', 'NN'),
+('AC Work', '200015', '100012', 'Finance Dept', 'Shimla', '7781923512', 'Connor', 'OO');
