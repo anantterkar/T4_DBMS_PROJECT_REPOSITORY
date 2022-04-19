@@ -26,22 +26,22 @@ INSERT INTO T4_Customer VALUES
 -- VEHICLE NUMBER TO BE INSERTED AFTER STUDYING QUERY 5
 -- Vehicle id from 200001 - 200016
 INSERT INTO T4_Vehicle VALUES
-('200001','100001','205834',A,B,1400000  ,'SUV'      ,60 ,6,'Morris Garages',239034,392618,C,'2LX1876789'),
-('200002','100002','243542',A,B,1000000  ,'Sedan'    ,40 ,4,'Hyundai'    ,942618,563810,C,'1MR5534254'),
-('200003','100003','546535',A,B,2500000  ,'MUV'      ,80 ,5,'Toyota'     ,234523,234934,C,'2RX3754563'),
-('200004','100004','029348',A,B,24000000 ,'Coupe'    ,100,4,'Mercedes'   ,543223,641542,C,'1LX4345654'),
-('200005','100005','234899',A,B,900000   ,'Sedan'    ,50 ,4,'Volkswagen' ,673432,213479,C,'4LT3765655'),
-('200006','100006','546089',A,B,1100000  ,'Sedan'    ,40 ,4,'Toyota'     ,234523,923843,C,'1YC4958364'),
-('200007','100007','198754',A,B,3000000  ,'MUV'      ,70 ,5,'Ford'       ,764535,435923,C,'2OQ1324355'),
-('200008','100008','872394',A,B,92000000 ,'Sports'   ,90 ,2,'McLaren'    ,174027,472104,C,'4KF2569853'),
-('200009','100008','234039',A,B,600000   ,'Sedan'    ,30 ,4,'Maruti'     ,382621,402817,C,'2XU3989543'),
-('200010','100009','656734',A,B,530000   ,'Sedan'    ,75 ,4,'Ford'       ,945732,934582,C,'1IE4234464'),
-('200011','100009','763554',A,B,2000000  ,'Hatchback',80 ,6,'Lamborghini',734235,432584,C,'4FI2754645'),
-('200012','100009','946834',A,B,3000000  ,'Coupe'    ,130,2,'Porsche'    ,482618,492164,C,'3IF3234532'),
-('200013','100010','093234',A,B,700000   ,'Sedan'    ,80 ,4,'Skoda'      ,293472,346732,C,'1AS1243676'),
-('200014','100011','734534',A,B,400000   ,'Sedan'    ,40 ,4,'Mustang'    ,490234,736242,C,'2LF4345234'),
-('200015','100012','324945',A,B,1200000  ,'Hatchback',43 ,5,'Hyundai'    ,234643,264343,C,'4PC2375563'),
-('200016','100013','435035',A,B,5000000  ,'Sports'   ,140,2,'Mercedes'   ,023432,123041,C,'1QU3342342');
+('200001','100001','205834',NULL, NULL,1400000  ,'SUV'      ,60 ,6,'Morris Garages',239034,392618, NULL,'2LX1876789'),
+('200002','100002','243542',NULL, NULL,1000000  ,'Sedan'    ,40 ,4,'Hyundai'    ,942618,563810,NULL,'1MR5534254'),
+('200003','100003','546535',NULL, NULL,2500000  ,'MUV'      ,80 ,5,'Toyota'     ,234523,234934,NULL,'2RX3754563'),
+('200004','100004','029348',NULL, NULL,24000000 ,'Coupe'    ,100,4,'Mercedes'   ,543223,641542,NULL,'1LX4345654'),
+('200005','100005','234899',NULL, NULL,900000   ,'Sedan'    ,50 ,4,'Volkswagen' ,673432,213479,NULL,'4LT3765655'),
+('200006','100006','546089',NULL, NULL,1100000  ,'Sedan'    ,40 ,4,'Toyota'     ,234523,923843,NULL,'1YC4958364'),
+('200007','100007','198754',NULL, NULL,3000000  ,'MUV'      ,70 ,5,'Ford'       ,764535,435923,NULL,'2OQ1324355'),
+('200008','100008','872394',NULL, NULL,92000000 ,'Sports'   ,90 ,2,'McLaren'    ,174027,472104,NULL,'4KF2569853'),
+('200009','100008','234039',NULL, NULL,600000   ,'Sedan'    ,30 ,4,'Maruti'     ,382621,402817,NULL,'2XU3989543'),
+('200010','100009','656734',NULL, NULL,530000   ,'Sedan'    ,75 ,4,'Ford'       ,945732,934582,NULL,'1IE4234464'),
+('200011','100009','763554',NULL, NULL,2000000  ,'Hatchback',80 ,6,'Lamborghini',734235,432584,NULL,'4FI2754645'),
+('200012','100009','946834',NULL, NULL,3000000  ,'Coupe'    ,130,2,'Porsche'    ,482618,492164,NULL,'3IF3234532'),
+('200013','100010','093234',NULL, NULL,700000   ,'Sedan'    ,80 ,4,'Skoda'      ,293472,346732,NULL,'1AS1243676'),
+('200014','100011','734534',NULL, NULL,400000   ,'Sedan'    ,40 ,4,'Mustang'    ,490234,736242,NULL,'2LF4345234'),
+('200015','100012','324945',NULL, NULL,1200000  ,'Hatchback',43 ,5,'Hyundai'    ,234643,264343,NULL,'4PC2375563'),
+('200016','100013','435035',NULL, NULL,5000000  ,'Sports'   ,140,2,'Mercedes'   ,023432,123041,NULL,'1QU3342342');
 
 -- Application id Values from 300001 - 300016
 INSERT INTO T4_Application VALUES
@@ -63,180 +63,181 @@ INSERT INTO T4_Application VALUES
 ('300016', '100013', '200016', 'Accepted', 'Collision Damage or Own Damage (OD) Cover');
 
 INSERT INTO T4_Department VALUES
-('Sales Dept',NULL, NULL, '9587462587', '','Udit'),
-('R&D Dept',NULL, NULL, '9752145698', '','Prateek'),
-('Accounts Dept',NULL, NULL, '9658742165', '','Anant'),
-('HR Dept',NULL, NULL, '7896584256', '','Amit'),
-('Admin Dept',NULL, NULL, '8457963215', '','Rohit'),
-('Maintainence Dept',NULL, NULL, '8699547125', '','Rahul'),
-('Production Dept',NULL, NULL, '9987458216', '','Pratham'),
-('Finance Dept ',NULL, NULL, '9876586215', '','Kapil'),
-('Operations Dept',NULL, NULL, '7856548236', '','Modi'),
-('Purchase Dept',NULL, NULL, '9987458625', '','Pramod'),
-('Project Dept',NULL, NULL, '7854956523', '','Ram');
+('Sales Dept','Aegon Insurance', 'Bhatt Limited', '9587462587', '','Udit'),
+('R&D Dept','Aviva Insurance', 'Reddy Co', '9752145698', '','Prateek'),
+('Accounts Dept','Bajaj Insurance', 'Ali inc', '9658742165', '','Anant'),
+('HR Dept','Bharti Insurance', 'Sharma and Sons', '7896584256', '','Amit'),
+('Admin Dept','Birla Insurance', 'Pathak Limited', '8457963215', '','Rohit'),
+('Maintainence Dept','Canara Bank', 'Rai Co', '8699547125', '','Rahul'),
+('Production Dept','DLF Insurance', 'Raj and sons', '9987458216', '','Pratham'),
+('Finance Dept','Exide Insurance', 'Bandhu Limited', '9876586215', '','Kapil'),
+('Operations Dept','Future Insurance', 'Preeti LLC', '7856548236', '','Modi'),
+('Purchase Dept','HDFC Insurance', 'Kamal Inc', '9987458625', '','Pramod'),
+('Project Dept','ICICI Insurance', 'Singh Limited', '7854956523', '','Ram');
 
 -- Department Name = Departmentid From 201 - 204
 -- Policy Number Values from 101 - 109
 -- Description to be added
 INSERT INTO T4_Insurance_policy VALUES
-('400001', '300001', '100001', 'Sales Dept', '101', '2010-01-01', '2011-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400002', '300002', '100002', 'R&D Dept', '102', '2009-02-01', '2010-02-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
-('400003', '300003', '100003', 'Accounts Dept', '103', '2015-03-01', '2016-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400004', '300004', '100004', 'Sales Dept', '104', '2013-04-01', '2014-04-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
-('400005', '300005', '100005', 'Operations Dept', '103', '2018-05-01', '2019-05-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
-('400006', '300006', '100006', 'Accounts Dept', '106', '2019-06-01', '2020-06-01', 'Coverage against loss of or damage to your vehicle caused by natural calamities'),
-('400007', '300007', '100007', 'R&D Dept', '107', '2011-07-01', '2012-07-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400001', '300001', '100001', 'Sales Dept', '101', '2010-01-01', '2011-01-01', 'Coverage against fire'),
+('400002', '300002', '100002', 'R&D Dept', '102', '2009-02-01', '2010-02-01', 'Coverage against theft'),
+('400003', '300003', '100003', 'Accounts Dept', '103', '2015-03-01', '2016-03-01', 'Coverage against accident'),
+('400004', '300004', '100004', 'Sales Dept', '104', '2013-04-01', '2014-04-01', 'Coverage against third party property damage'),
+('400005', '300005', '100005', 'Operations Dept', '103', '2018-05-01', '2019-05-01', 'Coverage against natural calamities'),
+('400006', '300006', '100006', 'Accounts Dept', '106', '2019-06-01', '2020-06-01', 'Coverage against legal liability'),
+('400007', '300007', '100007', 'R&D Dept', '107', '2011-07-01', '2012-07-01', 'Coverage against third party property damage'),
 ('400008', '300008', '100008', 'Maintainence Dept', '104', '2018-08-01', '2019-08-01', 'Liability Coverage'),
-('400009', '300009', '100008', 'Operations Dept', '105', '2017-09-01', '2018-09-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400010', '300010', '100009', 'Purchase Dept', '109', '2016-10-01', '2017-10-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities'),
-('400011', '300011', '100009', 'Production Dept', '108', '2014-11-01', '2015-11-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400012', '300012', '100009', 'R&D Dept', '102', '2012-12-01', '2013-12-01', 'Coverage against loss of or damage to your vehicle caused by accident'),
-('400013', '300013', '100010', 'Sales Dept', '103', '2020-01-01', '2021-01-01', 'Coverage against loss of or damage to your vehicle caused by accident also for the legal liability for the damage you may cause to a third party property - while using your vehicle'),
+('400009', '300009', '100008', 'Operations Dept', '105', '2017-09-01', '2018-09-01', 'Coverage against accident,theft,fire,natural calamities'),
+('400010', '300010', '100009', 'Purchase Dept', '109', '2016-10-01', '2017-10-01', 'Coverage against accident'),
+('400011', '300011', '100009', 'Production Dept', '108', '2014-11-01', '2015-11-01', 'Coverage accident,fire,natural calamities'),
+('400012', '300012', '100009', 'R&D Dept', '102', '2012-12-01', '2013-12-01', 'Coverage against self-ignition'),
+('400013', '300013', '100010', 'Sales Dept', '103', '2020-01-01', '2021-01-01', 'Coverage against a legal liability for the damage you may cause'),
 ('400014', '300014', '100011', 'Finance Dept ', '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
-('400015', '300015', '100012', 'Maintainence Dept', '105', '2008-03-01', '2009-03-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,natural calamities'),
-('400001', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle caused by accident,theft,fire,explosion,self-ignition,riots,strikes or acts of terrorism,natural calamities');
-
+('400015', '300015', '100012', 'Maintainence Dept', '105', '2008-03-01', '2009-03-01', 'Coverage against theft'),
+('400016', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle');
 
 INSERT INTO T4_Incident VALUES
-('500001','Fire','2011-10-03','Sparks from tear in the electric wiring systems are not covered in insurance');
-('500002','Theft','2003-10-07','Insurers will pay an amount equal to declared value of insured bike in case of theft.');
-('500003','Collision Coverage','2004-08-23','100% of the sum insured is offered on the accidental death of the insured person.');
-('500004','Lightning','2006-08-15','Under The policy of Standard Fire and Special Perils Policy Coverage you can claim the Damage coverages');
-('500005','Faulty ignition','2006-11-14','Third-party car insurance cover will pay for any fiscal liability');
-('500006','External explosion','2008-05-23','Most home and contents insurance covers you for damage caused by fire, including bushfire');
-('500007','Burglary','2009-10-15', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.');
-('500008','Wildfire','2012-03-02', 'Insurance contract safeguards the insured against unforeseen contingency caused by accidental fire, lightning, explosion/implosion, destruction or damage caused by aerial devices, man made perils');
-('500009','Mechanical breakdown','2014-01-07','Equipment breakdown coverage.');
-('500010','Drunk Driving victim','2014-01-20','Driving under the influence of alcohol or drugs is illegal obviously');
-('500011','Natural disaster','2014-11-21','A comprehensive car insurance policy provides coverage against damages or losses caused due to almost all natural disasters');
-('500012','Auto liability coverage','2015-04-09','Liability insurance is a part of the general insurance system of risk financing');
-('500013','Floods Damage','2015-11-17', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.');
-('500014','Comprehensive Insurance','2016-04-04','provides the minimal required coverage of losses related to a third-party.');
-('500015','Aggravated damage','2017-07-28','Aggravated damages are the special and highly exceptional damages awarded on a defendant by a court');
+('500001','Fire','2011-10-03','Sparks from tear in the electric wiring systems are not covered in insurance'),
+('500002','Theft','2003-10-07','Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+('500003','Collision Coverage','2004-08-23','100% of the sum insured is offered on the accidental death of the insured person.'),
+('500004','Lightning','2006-08-15','Under The policy of Standard Fire you can claim the Damage coverages'),
+('500005','Faulty ignition','2006-11-14','Third-party car insurance cover will pay for any fiscal liability'),
+('500006','External explosion','2008-05-23','Most homeinsurance covers you for damage caused by fire'),
+('500007','Burglary','2009-10-15', 'Insurers will pay an amount equal to declared value of insured bike in case of theft.'),
+('500008','Wildfire','2012-03-02', 'Insurance contract safeguards damage caused by accidental fire, lightning, explosion/implosion'),
+('500009','Mechanical breakdown','2014-01-07','Equipment breakdown coverage.'),
+('500010','Drunk Driving victim','2014-01-20','Driving under the influence of alcohol or drugs is illegal obviously'),
+('500011','Natural disaster','2014-11-21','A comprehensive car insurance policy provides coverage against damages'),
+('500012','Auto liability coverage','2015-04-09','Liability insurance is a part of the general insurance system of risk financing'),
+('500013','Floods Damage','2015-11-17', 'Add on cover called Engine Protection to cover the losses to engine due to flood water.'),
+('500014','Comprehensive Insurance','2016-04-04','provides the minimal required coverage of losses related to a third-party.'),
+('500015','Aggravated damage','2017-07-28','Aggravated damages are the special on a defendant by a court');
 
 INSERT INTO T4_Incident_Report  VALUES
-('600001','500001','100001','Anand',25000,'Fire','Shortcircuit in console');                            
-('600002','500002','100002','Satish',400000,'Theft','Stolen');
-('600003','500003','100003','Zaid',18000,'Collision Coverage','Bumper damaged in collision');
-('600004','500004','100004','Reha',35000,'Lightning','Car hit by lightning');
-('600005','500005','100005','Ayush',21000,'Faulty ignition','The car has a malfunctioning ignition');
-('600006','500006','100006','Srishti',80000,'External explosion','Vehicle caught fire and exploded ');
-('600007','500007','100007','Shikha',100000,'Burglary','Parts stolen');
-('600008','500008','100008','Ajith',500000,'Wildfire','Vehicle damaged in wildfire');
-('600009','500009','100009','Mayank',55000,'Mechanical breakdown','Axle broke down');
-('600010','500010','100010','Hitesh',89000,'Drunk Driving victim','Drunk driver crashed and caused damage');
-('600011','500011','100011','Kamal',2500000,'Natural disaster','Damaged in a cyclone');
-('600012','500012','100012','Jagandeep',250000,'Auto liability coverage','Vehicle caused damage to other vehicles');
-('600013','500013','100013','Shanu',1500000,'Floods Damage','Submerged car does not start');
-('600014','500014','100014','Ajmal',250000,'Comprehensive Insurance','Insurance plan that covers the insured person against both, own damages and any third party liabilities');
-('600015','500015','100015','Sundar',17000,'Aggravated damage','Vehicle damaged by jilted lover');
+('600001','500001','100001','Anand',25000,'Fire','Shortcircuit in console'),                            
+('600002','500002','100002','Satish',400000,'Theft','Stolen'),
+('600003','500003','100003','Zaid',18000,'Collision','Bumper damaged in collision'),
+('600004','500004','100004','Reha',35000,'Lightning','Car hit by lightning'),
+('600005','500005','100005','Ayush',21000,'Ignition','The car has a malfunctioning ignition'),
+('600006','500006','100006','Srishti',80000,'Explosion','Vehicle caught fire and exploded '),
+('600007','500007','100007','Shikha',100000,'Burglary','Parts stolen'),
+('600008','500008','100008','Ajith',500000,'Wildfire','Vehicle damaged in wildfire'),
+('600009','500009','100009','Mayank',55000,'Breakdown','Axle broke down'),
+('600010','500010','100010','Hitesh',89000,'Floods','Drunk driver crashed and caused damage'),
+('600011','500011','100011','Kamal',2500000,'Disaster','Damaged in a cyclone'),
+('600012','500012','100012','Jagandeep',250000,'Liability','Vehicle caused damage to other vehicles'),
+('600013','500013','100013','Shanu',1500000,'Floods','Submerged car does not start'),
+('600014','500014','100014','Ajmal',250000,'Lightning','Insurance plan that covers the insured person against both'),
+('600015','500015','100015','Sundar',17000,'Damage','Vehicle damaged by jilted lover');
 
 INSERT INTO T4_Premium_Payment VALUES 
-('700001' ,'100001', 23235345 ,   '2013-12-23' , 400000 ,  30901 );
-('700002' ,'100002', 34423423 ,   '2019-11-20' , 32000 ,    30907);
-('700003' ,'100003', 342355325 ,  '2013-02-25' , 520000 ,   30903  );
-('700004' ,'100004', 4542334 ,    '2019-05-15' , 400000 ,  30904  );
-('700005' ,'100005', 3434235 ,    '2013-04-13' , 52000 ,    30905  );
-('700006' ,'100006', 86575745 ,   '2019-04-21' , 400000 ,   30906  );
-('700007' ,'100007', 74576547 ,   '2013-09-11' , 3800000 ,  30907  );
-('700008' ,'100008', 3432443535 , '2019-09-24' , 400000 ,  30908  );
-('700009' ,'100009', 34234234434 ,'2013-08-12' , 360000 ,  30909  );
-('700010' ,'100010', 534324 ,     '2019-01-23' , 2800000 , 30910  );
-('700011' ,'100011', 342343434 ,  '2013-11-17' , 220000 ,  30911  );
-('700012' ,'100012', 87686867 ,   '2019-12-14' , 380000 ,   30912  );
-('700013' ,'100013', 767455436 ,  '2013-10-06' , 280000 ,  30913  );
-('700014' ,'100014', 6547554 ,    '2019-10-09' , 4000000 ,  30914  );
-('700015' ,'100015', 84567546 ,   '2013-05-02' , 3500000 , 30915  );
+('700001' ,'100001', 23235345 ,   '2013-12-23' , 400000 , '140001'),
+('700002' ,'100002', 34423423 ,   '2019-11-20' , 32000 ,  '140002'),
+('700003' ,'100003', 342355325 ,  '2013-02-25' , 520000 , '140003'  ),
+('700004' ,'100004', 4542334 ,    '2019-05-15' , 400000 , '140004'  ),
+('700005' ,'100005', 3434235 ,    '2013-04-13' , 52000 ,  '140005'  ),
+('700006' ,'100006', 86575745 ,   '2019-04-21' , 400000 , '140006'  ),
+('700007' ,'100007', 74576547 ,   '2013-09-11' , 3800000 , '140007'  ),
+('700008' ,'100008', 3432443535 , '2019-09-24' , 400000 ,  '140008'  ),
+('700009' ,'100009', 34234234434 ,'2013-08-12' , 360000 ,  '140009'  ),
+('700010' ,'100010', 534324 ,     '2019-01-23' , 2800000 , '140010'  ),
+('700011' ,'100011', 342343434 ,  '2013-11-17' , 220000 ,  '140011'  ),
+('700012' ,'100012', 87686867 ,   '2019-12-14' , 380000 ,   '140012'  ),
+('700013' ,'100013', 767455436 ,  '2013-10-06' , 280000 ,  '140013'  ),
+('700014' ,'100014', 6547554 ,    '2019-10-09' , 4000000 ,  '140014'),
+('700015' ,'100015', 84567546 ,   '2013-05-02' , 3500000 , '140015');
 
 
 INSERT INTO T4_Coverage VALUES 
-('800001', 410000, 'Liability', 'HIGH', NULL, 'When accident takes place before your fault', '1 Year', 'Birla Sun Vehicle Insurance Company Limited'),
-('800002', 520000, 'Collision', 'HIGH', NULL, 'Bear your car repair expenses after the accident', '8 Months', 'ICICI Prudential Vehicle Insurance Company Limited'),
-('800003', 630000, 'Personal Injury', 'LOW', NULL,  'Personal injury protection will cover all the costs associated with the accident', '8 Months', 'Birla Sun Vehicle Insurance Company Limited'),
-('800004', 400000, 'Liability', 'LOW', NULL, 'When accident takes place before your fault', '2 Years', 'Canara HSBC Oriental Bank of Commerce LIC Limited'),
-('800005', 150000, 'Comprehensive', 'LOW', NULL, 'Includes all kinds of risk factors that are associated with your vehicle, driver, passengers, third-party vehicle, third-party driver, third-party vehicle passengers and third-party property', '8 Months', 'DLF Pramerica Vehicle Insurance Company Limited'),
-('800006', 160000, 'Personal Injury', 'HIGH', NULL, 'Personal injury protection will cover all the costs associated with the accident', '13 Months', 'Max Vehicle Insurance Company Limited'),
-('800007', 170000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '18 Months', 'Birla Sun Vehicle Insurance Company Limited'),
-('800008', 180000, 'Collision', 'MEDIUM', NULL, 'Bear your car repair expenses after the accident', '15 Months', 'Exide Vehicle Insurance Company Limited'),
-('800009', 190000, 'Personal Injury', 'LOW', NULL, 'Personal injury protection will cover all the costs associated with the accident', '5 Months', 'Birla Sun Vehicle Insurance Company Limited'),
-('800010', 199000, 'Comprehensive', 'LOW', NULL, 'Include all kinds of risk factors that are associated with your vehicle, driver, passengers, third-party vehicle, third-party driver, third-party vehicle passengers and third-party property', '8 Months', 'Future Generali India Vehicle Insurance Company Limited'),
-('800011', 123000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '1 Year', 'Kotak Vehicle Insurance Company Limited'),
-('800012', 156000, 'Collision', 'MEDIUM', NULL, 'Bear your car repair expenses after the accident', '1 Months', 'Kotak Vehicle Insurance Company Limited'),
-('800013', 543000, 'Liability', 'HIGH', NULL, 'When accident takes place before your fault', '3 Years', 'Bharti AXA Vehicle Insurance Company Limited'),
-('800014', 687000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '1 Year', 'Aviva Vehicle Insurance Company Limited'),
-('800015', 653000, 'Liability', 'MEDIUM', NULL, 'When accident takes place before your fault', '18 Months', 'Aegon Vehicle Insurance Company Limited');
+('800001', 410000, 'Liability', 'HIGH', '900001', 'When accident takes place before your fault', '1 Year', 'Birla Insurance'),
+('800002', 520000, 'Collision', 'HIGH', '900002', 'Bear your car repair expenses after the accident', '8 Months', 'ICICI Insurance'),
+('800003', 630000, 'Injury', 'LOW', '900003',  'Personal injury protection will cover all the costs', '8 Months', 'Birla Insurance'),
+('800004', 400000, 'Liability', 'LOW', '900004', 'When accident takes place before your fault', '2 Years', 'Canara Bank'),
+('800005', 150000, 'Collision', 'LOW', '900005', 'Includes risk factors with your vehicle, driver, passengers', '8 Months', 'DLF Insurance'),
+('800006', 160000, 'Injury', 'HIGH', '900006', 'Personal injury protection will cover all the costs associated with the accident', '13 Months', 'Max Insurance'),
+('800007', 170000, 'Liability', 'MEDIUM', '900007', 'When accident takes place before your fault', '18 Months', 'Birla Insurance'),
+('800008', 180000, 'Collision', 'MEDIUM', '900008', 'Bear your car repair expenses after the accident', '15 Months', 'Exide Insurance'),
+('800009', 190000, 'Injury', 'LOW', '900009', 'Personal injury protection will cover all the costs associated with the accident', '5 Months', 'Birla Insurance'),
+('800010', 199000, 'Injury', 'LOW', '900010', 'Include risk factors with your vehicle, driver, passengers', '8 Months', 'Exide Insurance'),
+('800011', 123000, 'Liability', 'MEDIUM', '900011', 'When accident takes place before your fault', '1 Year', 'Kotak Insurance'),
+('800012', 156000, 'Collision', 'MEDIUM', '900012', 'Bear your car repair expenses after the accident', '1 Months', 'Kotak Insurance'),
+('800013', 543000, 'Liability', 'HIGH', '900013', 'When accident takes place before your fault', '3 Years', 'Bharti Insurance'),
+('800014', 687000, 'Liability', 'MEDIUM', '900014', 'When accident takes place before your fault', '1 Year', 'Aviva Insurance'),
+('800015', 653000, 'Liability', 'MEDIUM', '900015', 'When accident takes place before your fault', '18 Months', 'Aegon Insurance');
 
 INSERT INTO T4_Product values
-('900001', '40000','Bike Insurance/Two Wheeler','Birla Sun Vehicle Insurance Company Limited' ),
-('900002', '120000','Car Insurance', 'Kotak Vehicle Insurance Company Limited'),
-('900003', '20000','Two Wheeler-Economy','Kotak Vehicle Insurance Company Limited' ),
-('900004', '80000','Car Insurance-Economy','Birla Sun Vehicle Insurance Company Limited' ),
-('900005', '90000','Two Wheeler-Luxury', 'Kotak Vehicle Insurance Company Limited'),
-('900006', '200000','Car Insurance-Luxury', 'Kotak Vehicle Insurance Company Limited'),
-('900007', '4000','Two Wheeler- Topup', 'Birla Sun Vehicle Insurance Company Limited'),
-('900008', '1000','Two Wheeler- Topup Economy','Canara HSBC Oriental Bank of Commerce LIC Limited' ),
-('900009', '10000','Car Insurance-Topup', 'Aegon Vehicle Insurance Company Limited'),
-('900010', '40000','Bike Insurance/Two Wheeler', 'Kotak Vehicle Insurance Company Limited'),
-('900011', '40000','Bike Insurance/Two Wheeler','Birla Sun Vehicle Insurance Company Limited' ),
-('900012', '40000','Bike Insurance/Two Wheeler', 'DLF Pramerica Vehicle Insurance Company Limited'),
-('900013', '40000','Car Insurance-Economy','IDBI Federal Vehicle Insurance Company Limited' ),
-('900014', '40000','Electric Vehicle Insurance', 'Birla Sun Vehicle Insurance Company Limited'),
-('900015', '40000','Bike Insurance/Two Wheeler', 'Canara HSBC Oriental Bank of Commerce LIC Limited');
+('900001', '40000','Bike Insurance','Birla Insurance' ),
+('900002', '120000','Car Insurance', 'Kotak Insurance'),
+('900003', '20000','Two Wheeler','Kotak Insurance' ),
+('900004', '80000','Car-Economy','Birla Insurance' ),
+('900005', '90000','Two Wheeler', 'Kotak Insurance'),
+('900006', '200000','Car-Luxury', 'Kotak Insurance'),
+('900007', '4000','Two Wheeler', 'Birla Insurance'),
+('900008', '1000','Two Wheeler','Canara Bank' ),
+('900009', '10000','Car-Topup', 'Aegon Insurance'),
+('900010', '40000','two wheeler', 'Kotak Insurance'),
+('900011', '40000','Two Wheeler','Birla Insurance' ),
+('900012', '40000','Two Wheeler', 'DLF Insurance'),
+('900013', '40000','Car-Economy','IDBI Insurance' ),
+('900014', '40000','Car/Bike', 'Birla Insurance'),
+('900015', '40000','Two Wheeler', 'Canara Bank');
 
  
+-- ('Bhatt Limited', 'Vishesh Bhatt', '1212121212', 'Lucknow', 1200000,"", 'Sales Dept', 'Kotak Insurance'); 
 INSERT INTO T4_Office VALUES 
-('Bhatt Limited', 'Vishesh Bhatt', '1212121212', 'Lucknow', '1200000','31501', 'Sales  Dept', '30506', 'Kotak Vehicle Insurance Company Limited'),
-('Reddy Co', 'Srinivas Reddy', '2323232323', 'Bangalore', '1300000','31502','R&D Dept', '30506', 'Kotak Vehicle Insurance Company Limited'),
-('Ali inc', 'Lucky Ali', '5858585858', 'Bangalore', '1400000','31503', 'Accounts Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
-('Sharma and Sons', 'Shubham Sharma', '3131311333', 'Jabalpur', '1500000','31504','HR Dept', '30507','Aegon Vehicle Insurance Company Limited'),
-('Pathak Limited', 'Deeksha Pathak', '4747474747', 'Mumbai', '1600000','31505', 'Admin Dept', '30501', ' Bajaj Allianz Vehicle Insurance Company Limited'),
-('Rai Co', 'Balwant Rai', '3245678541', 'Mumbai', '1700000','31506', 'Maintainence  Dept', '30510', ' Canara HSBC Oriental Bank of Commerce LIC Limited'),
-('Raj and sons', 'Krishna Raj', '8769543211', 'Pune', '1800000','31507', 'Production  Dept', '30502', 'Birla Sun Vehicle Insurance Company Limited'),
-('Bandhu Private Limited', 'Rama Bandhu', '2341675897', 'Hyderbad', '1900000','31508', 'Finance  Dept', '30502', 'Birla Sun Vehicle Insurance Company Limited'),
-('Preeti LLC', 'Preeti Rai', '9876987652', 'Hyderbad', '1100000','31509', 'Operations  Dept', '30510', ' Canara HSBC Oriental Bank of Commerce LIC Limited'),
-('Kamal Inc', 'Kamal Kaushik', '4356273891', 'Delhi', '1000000','31510', 'Purchase  Dept', '30507', 'Canara HSBC Oriental Bank of Commerce LIC Limited'),
-('Singh Limited', 'Rai Singh', '678781155', 'Pune', '1250000','31511', 'Project  Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
-('Dhvani LLC', 'Dhvani Krishna', '98483356733', 'Lucknow', '1340000','31512', 'Sales Dept', '30515', 'HDFC Vehicle Insurance Company Limited'),
-('Davar Co', 'Shaimak Davar', '8900678456', 'Chennai', '1780000','31513', 'Accounts Dept', '30501', ' Bajaj Allianz Vehicle Insurance Company Limited'),
-('Bista Inc', 'Jay Bista', '5678904357', 'Bangalore', '1560000','31514', 'Maintainence  Dept', '30504','ICICI Prudential Vehicle Insurance Company Limited'),
-('Nikita and Sons', 'Nikita Rai', '9090887766', 'Bangalore', '1650000','31515', 'Finance Dept', '30515', 'Future Generali India Vehicle Insurance Company Limited');
+('Bhatt Limited', 'Vishesh Bhatt', '1212121212', 'Lucknow', 1200000,"", 'Sales Dept', 'Kotak Insurance'),
+('Reddy Co', 'Srinivas Reddy', '2323232323', 'Bangalore', 1300000,"", 'R&D Dept', 'Kotak Insurance'),
+('Ali inc', 'Lucky Ali', '5858585858', 'Bangalore', 1400000,"", 'Accounts Dept', 'ICICI Insurance'),
+('Sharma and Sons', 'Shubham Sharma', '3131311333', 'Jabalpur', 1500000,"", 'HR Dept', 'Aegon Insurance'),
+('Pathak Limited', 'Deeksha Pathak', '4747474747', 'Mumbai', 1600000,"", 'Admin Dept', 'Bajaj Insurance'),
+('Rai Co', 'Balwant Rai', '3245678541', 'Mumbai', 1700000,"", 'Maintainence Dept', 'Canara Bank'),
+('Raj and sons', 'Krishna Raj', '8769543211', 'Pune', 1800000,"", 'Production Dept', 'Birla Insurance'),
+('Bandhu Limited', 'Rama Bandhu', '2341675897', 'Hyderbad', 1900000,"", 'Finance Dept ', 'Birla Insurance'),
+('Preeti LLC', 'Preeti Rai', '9876987652', 'Hyderbad', 1100000,"", 'Operations Dept','Canara Bank'),
+('Kamal Inc', 'Kamal Kaushik', '4356273891', 'Delhi',1000000,"", 'Purchase Dept', 'Canara Bank'),
+('Singh Limited', 'Rai Singh', '678781155', 'Pune', 1250000,"", 'Project Dept','ICICI Insurance'),
+('Dhvani LLC', 'Dhvani Krishna', '98483356733', 'Lucknow', 1340000,"", 'Sales Dept', 'HDFC Insurance'),
+('Davar Co', 'Shaimak Davar', '8900678456', 'Chennai', 1780000,"", 'R&D Dept', 'Bajaj Insurance'),
+('Bista Inc', 'Jay Bista', '5678904357', 'Bangalore', 1560000,"", 'Accounts Dept','ICICI Insurance'),
+('Nikita and Sons', 'Nikita Rai', '9090887766', 'Bangalore', 1650000,"", 'Maintainence Dept', 'Future Insurance');
+
 
 -- T4_Claim
 INSERT INTO T4_Claim VALUES
-('110001', '100001', '400001', 50000, 'INCIDENT_ID', 'Vandalism', '2020-10-01', 'Approved'),
-('110002', '100002', '400002', 20000, 'INCIDENT_ID', 'Animal collisions', '2020-09-10', 'Rejected'),
-('110003', '100003', '400003', 350000, 'INCIDENT_ID', 'Accident', '2020-11-01', 'Pending'),
-('110004', '100004', '400004', 70000, 'INCIDENT_ID', 'Windshield damage', '2020-06-30', 'Approved'),
-('110005', '100005', '400005', 350000, 'INCIDENT_ID', 'Accident', '2020-12-25', 'Rejected'),
-('110006', '100006', '400006', 60000, 'INCIDENT_ID', 'Animal collisions', '2021-10-10', 'Pending'),
-('110007', '100007', '400007', 450000, 'INCIDENT_ID', 'Accident', '2019-05-15', 'Rejected'),
-('110008', '100008', '400008', 50000, 'INCIDENT_ID', 'Windshield damage', '2020-03-03', 'Approved'),
-('110009', '100009', '400009', 30000, 'INCIDENT_ID', 'Vandalism', '2020-07-18', 'Approved'),
-('110010', '100010', '400010', 750000, 'INCIDENT_ID', 'Accident', '2021-09-11', 'Pending'),
-('110011', '100011', '400011', 10000, 'INCIDENT_ID', 'Animal collisions', '2020-11-01', 'Approved'),
-('110012', '100012', '400012', 250000, 'INCIDENT_ID', 'Accident', '2020-02-20', 'Pending'),
-('110013', '100013', '400013', 22000, 'INCIDENT_ID', 'Vandalism', '2020-05-24', 'Rejected'),
-('110014', '100014', '400014', 880000, 'INCIDENT_ID', 'Accident', '2020-07-14', 'Approved'),
-('110015', '100015', '400015', 22000, 'INCIDENT_ID', 'Animal collisions', '2020-11-04', 'Rejected'),
-('110016', '100001', '400016', 22000, 'INCIDENT_ID', 'Accident', '2020-01-22', 'Pending');
+('110001', '100001', '400001', 50000, '500001', 'Vandalism', '2020-10-01', 'Approved'),
+('110002', '100002', '400002', 20000, '500002', 'Animal collisions', '2020-09-10', 'Rejected'),
+('110003', '100003', '400003', 350000, '500003', 'Accident', '2020-11-01', 'Pending'),
+('110004', '100004', '400004', 70000, '500004', 'Windshield damage', '2020-06-30', 'Approved'),
+('110005', '100005', '400005', 350000, '500005', 'Accident', '2020-12-25', 'Rejected'),
+('110006', '100006', '400006', 60000, '500006', 'Animal collisions', '2021-10-10', 'Pending'),
+('110007', '100007', '400007', 450000, '500007', 'Accident', '2019-05-15', 'Rejected'),
+('110008', '100008', '400008', 50000, '500008', 'Windshield damage', '2020-03-03', 'Approved'),
+('110009', '100009', '400009', 30000, '500009', 'Vandalism', '2020-07-18', 'Approved'),
+('110010', '100010', '400010', 750000, '500010', 'Accident', '2021-09-11', 'Pending'),
+('110011', '100011', '400011', 10000, '500011', 'Animal collisions', '2020-11-01', 'Approved'),
+('110012', '100012', '400012', 250000, '500012', 'Accident', '2020-02-20', 'Pending'),
+('110013', '100013', '400013', 22000, '500013', 'Vandalism', '2020-05-24', 'Rejected'),
+('110014', '100014', '400014', 880000, '500014', 'Accident', '2020-07-14', 'Approved'),
+('110015', '100015', '400015', 22000, '500015', 'Animal collisions', '2020-11-04', 'Rejected'),
+('110016', '100001', '400016', 22000, '500012', 'Accident', '2020-01-22', 'Pending');
 
 -- T4_Claim_Settlement
-INSERT INTO T4_Claim_Settlement
-('120001', '110001', '100001', '200001', '2020-10-20', 50000, 'COVERAGE_ID'),
-('120002', '110002', '100002', '200002', '2020-10-10', 20000, 'COVERAGE_ID'),
-('120003', '110003', '100003', '200003', '2020-12-01', 350000, 'COVERAGE_ID'),
-('120004', '110004', '100004', '200004', '2020-08-30', 70000, 'COVERAGE_ID'),
-('120005', '110005', '100005', '200005', '2021-02-25', 350000, 'COVERAGE_ID'),
-('120006', '110006', '100006', '200006', '2021-12-10', 60000, 'COVERAGE_ID'),
-('120007', '110007', '100007', '200007', '2019-05-25', 450000, 'COVERAGE_ID'),
-('120008', '110008', '100008', '200008', '2020-03-20', 50000, 'COVERAGE_ID'),
-('120009', '110009', '100009', '200009', '2020-09-22', 30000, 'COVERAGE_ID'),
-('120010', '110010', '100010', '200010', '2021-10-21', 750000, 'COVERAGE_ID'),
-('120011', '110011', '100011', '200011', '2020-12-28', 10000, 'COVERAGE_ID'),
-('120012', '110012', '100012', '200012', '2020-04-20', 250000, 'COVERAGE_ID'),
-('120013', '110013', '100013', '200013', '2020-06-24', 850000, 'COVERAGE_ID'), --!!!!
-('120014', '110014', '100014', '200014', '2020-09-14', 22000, 'COVERAGE_ID'),
-('120015', '110015', '100015', '200015', '2020-11-24', 20000, 'COVERAGE_ID'); --!!!!
+INSERT INTO T4_Claim_Settlement VALUES
+('120001', '110001', '100001', '200001', '2020-10-20', 50000, '800001'),
+('120002', '110002', '100002', '200002', '2020-10-10', 20000, '800002'),
+('120003', '110003', '100003', '200003', '2020-12-01', 350000, '800003'),
+('120004', '110004', '100004', '200004', '2020-08-30', 70000, '800004'),
+('120005', '110005', '100005', '200005', '2021-02-25', 350000, '800005'),
+('120006', '110006', '100006', '200006', '2021-12-10', 60000, '800006'),
+('120007', '110007', '100007', '200007', '2019-05-25', 450000, '800007'),
+('120008', '110008', '100008', '200008', '2020-03-20', 50000, '800008'),
+('120009', '110009', '100009', '200009', '2020-09-22', 30000, '800009'),
+('120010', '110010', '100010', '200010', '2021-10-21', 750000, '800010'),
+('120011', '110011', '100011', '200011', '2020-12-28', 10000, '800011'),
+('120012', '110012', '100012', '200012', '2020-04-20', 250000, '800012'),
+('120013', '110013', '100013', '200013', '2020-06-24', 850000, '800013'), -- !!!!
+('120014', '110014', '100014', '200014', '2020-09-14', 22000, '800014'),
+('120015', '110015', '100015', '200015', '2020-11-24', 20000, '800015'); -- !!!!
 
 
 -- T4_Incident
@@ -259,72 +260,72 @@ INSERT INTO T4_Claim_Settlement
 
 
 -- T4_Receipt
-INSERT INTO T4_Receipt
-('140001', 'PREMIUM_PAYMENT_ID', '100001', 450, '2020-02-20'),
-('140002', 'PREMIUM_PAYMENT_ID', '100002', 250, '2020-02-21'),
-('140003', 'PREMIUM_PAYMENT_ID', '100003', 350, '2020-02-22'),
-('140004', 'PREMIUM_PAYMENT_ID', '100004', 550, '2020-02-23'),
-('140005', 'PREMIUM_PAYMENT_ID', '100005', 650, '2020-02-24'),
-('140006', 'PREMIUM_PAYMENT_ID', '100006', 750, '2020-02-25'),
-('140007', 'PREMIUM_PAYMENT_ID', '100007', 150, '2020-02-26'),
-('140008', 'PREMIUM_PAYMENT_ID', '100008', 250, '2020-02-27'),
-('140009', 'PREMIUM_PAYMENT_ID', '100009', 220, '2020-01-11'),
-('140010', 'PREMIUM_PAYMENT_ID', '100010', 330, '2020-01-12'),
-('140011', 'PREMIUM_PAYMENT_ID', '100011', 500, '2020-01-14'),
-('140012', 'PREMIUM_PAYMENT_ID', '100012', 780, '2020-01-13'),
-('140013', 'PREMIUM_PAYMENT_ID', '100013', 230, '2020-01-15'),
-('140014', 'PREMIUM_PAYMENT_ID', '100014', 320, '2020-01-16'),
-('140015', 'PREMIUM_PAYMENT_ID', '100015', 480, '2020-01-17');
+INSERT INTO T4_Receipt VALUES
+('140001', NULL, '100001', 450, '2020-02-20'),
+('140002', NULL, '100002', 250, '2020-02-21'),
+('140003', NULL, '100003', 350, '2020-02-22'),
+('140004', NULL, '100004', 550, '2020-02-23'),
+('140005', NULL, '100005', 650, '2020-02-24'),
+('140006', NULL, '100006', 750, '2020-02-25'),
+('140007', NULL, '100007', 150, '2020-02-26'),
+('140008', NULL, '100008', 250, '2020-02-27'),
+('140009', NULL, '100009', 220, '2020-01-11'),
+('140010', NULL, '100010', 330, '2020-01-12'),
+('140011', NULL, '100011', 500, '2020-01-14'),
+('140012', NULL, '100012', 780, '2020-01-13'),
+('140013', NULL, '100013', 230, '2020-01-15'),
+('140014', NULL, '100014', 320, '2020-01-16'),
+('140015', NULL, '100015', 480, '2020-01-17');
 
 -- T4_NOK
-INSERT INTO T4_NOK
-('150001', '400001', '100001', 'Abhigyan','Hyderabad','9541284125', 'Single', 'Male'),
-('150002', '400002', '100002', 'Nishita','Bangalore','9871284354', 'Married', 'Female'),
-('150003', '400003', '100003', 'Udita','Pune','8274141254', 'Single', 'Female'),
-('150004', '400004', '100004', 'Krishna','Mumbai','8423652322', 'Married', 'Male'),
-('150005', '400005', '100005', 'Abhishek','Kolkata','7541265455', 'Single', 'Male'),
-('150006', '400006', '100006', 'Harshit','Pune','8741236525', 'Married', 'Male'),
-('150007', '400007', '100007', 'Aisha','Vadodara','8296321466', 'Single', 'Female'),
-('150008', '400008', '100008', 'Divya','Bangalore','9563214552', 'Married', 'Female'),
-('150009', '400009', '100009', 'Kritika','New Delhi','7851254125', 'Single', 'Female'),
-('150010', '400010', '100010', 'Shubham','Hyderabad','7963214502', 'Married', 'Male'),
-('150011', '400011', '100011', 'Maurya','Mumbai','8604154632', 'Single', 'Male'),
-('150012', '400012', '100012', 'Michael','Bangalore','6387908561', 'Married', 'Male'),
-('150013', '400013', '100013', 'Jagrut','Pune','7507081126', 'Single', 'Male'),
-('150014', '400014', '100014', 'Rhea','Chennai','8007796961', 'Married', 'Female'),
-('150015', '400015', '100015', 'Shivangi','Chennai','9845106575', 'Single', 'Female');
+INSERT INTO T4_NOK VALUES
+('150001', '400001', '100001', 'Abhigyan','Hyderabad',95412125, 'Single', 'M'),
+('150002', '400002', '100002', 'Nishita','Bangalore',98774354, 'Married', 'F'),
+('150003', '400003', '100003', 'Udita','Pune',82741254, 'Single', 'F'),
+('150004', '400004', '100004', 'Krishna','Mumbai',84252322, 'Married', 'M'),
+('150005', '400005', '100005', 'Abhishek','Kolkata',75465455, 'Single', 'M'),
+('150006', '400006', '100006', 'Harshit','Pune',87412525, 'Married', 'M'),
+('150007', '400007', '100007', 'Aisha','Vadodara',82963214, 'Single', 'F'),
+('150008', '400008', '100008', 'Divya','Bangalore',56321452, 'Married', 'F'),
+('150009', '400009', '100009', 'Kritika','New Delhi',785125412, 'Single', 'F'),
+('150010', '400010', '100010', 'Shubham','Hyderabad',79632145, 'Married', 'M'),
+('150011', '400011', '100011', 'Maurya','Mumbai',60415463, 'Single', 'M'),
+('150012', '400012', '100012', 'Michael','Bangalore',6380855, 'Married', 'M'),
+('150013', '400013', '100013', 'Jagrut','Pune',75070811, 'Single', 'M'),
+('150014', '400014', '100014', 'Rhea','Chennai',80077969, 'Married', 'F'),
+('150015', '400015', '100015', 'Shivangi','Chennai',98451065, 'Single', 'F');
 
 -- Product ID Not Added
 -- Coverage Level Not Added
 INSERT INTO T4_Quote VALUES
-('160001', '300001', '100001', '2020-01-02', '2020-01-02', '2025-01-02', 'MG Hector', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160002', '300002', '100002', '2016-03-04', '2016-03-04', '2021-03-04', 'Hyundai Tucson', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160003', '300003', '100003', '2017-04-08', '2017-04-08', '2022-04-08', 'Toyota Camry', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160004', '300004', '100004', '2018-05-16', '2018-05-16', '2023-05-16', 'Mercedes Benz', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160005', '300005', '100005', '2019-06-03', '2019-06-03', '2024-06-03', 'Volkswagon Vento', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160006', '300006', '100006', '2021-07-09', '2021-07-09', '2026-07-09', 'Toyota Camry', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160007', '300007', '100007', '2015-08-27', '2015-08-27', '2020-08-27', 'Ford Fiesta', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160008', '300008', '100008', '2014-09-05', '2014-09-05', '2019-09-05', 'Mclaren GT', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160009', '300009', '100008', '2013-10-10', '2013-10-10', '2018-10-10', 'Maruti Suzuki', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160010', '300010', '100009', '2012-11-15', '2012-11-15', '2017-11-15', 'Ford Endevour', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160011', '300011', '100009', '2011-12-11', '2011-12-11', '2016-12-11', 'Lamborghini Aventador', 'PRODUCT-ID', 'COVERAGE-LEVEL'),
-('160012', '300012', '100009', '2010-01-21', '2010-01-21', '2015-01-21', 'Porsche Carrera', 'PRODUCT-ID', 'COVERAGE-LEVEL');
+('160001', '300001', '100001', '2020-01-02', '2020-01-02', '2025-01-02', 'MG Hector', '900001', 'COVERAGE-LEVEL'),
+('160002', '300002', '100002', '2016-03-04', '2016-03-04', '2021-03-04', 'Hyundai Tucson', '900002', 'COVERAGE-LEVEL'),
+('160003', '300003', '100003', '2017-04-08', '2017-04-08', '2022-04-08', 'Toyota Camry', '900003', 'COVERAGE-LEVEL'),
+('160004', '300004', '100004', '2018-05-16', '2018-05-16', '2023-05-16', 'Mercedes Benz', '900004', 'COVERAGE-LEVEL'),
+('160005', '300005', '100005', '2019-06-03', '2019-06-03', '2024-06-03', 'Volkswagon Vento', '900005', 'COVERAGE-LEVEL'),
+('160006', '300006', '100006', '2021-07-09', '2021-07-09', '2026-07-09', 'Toyota Camry', '900006', 'COVERAGE-LEVEL'),
+('160007', '300007', '100007', '2015-08-27', '2015-08-27', '2020-08-27', 'Ford Fiesta', '900007', 'COVERAGE-LEVEL'),
+('160008', '300008', '100008', '2014-09-05', '2014-09-05', '2019-09-05', 'Mclaren GT', '900008', 'COVERAGE-LEVEL'),
+('160009', '300009', '100008', '2013-10-10', '2013-10-10', '2018-10-10', 'Maruti Suzuki', '900009', 'COVERAGE-LEVEL'),
+('160010', '300010', '100009', '2012-11-15', '2012-11-15', '2017-11-15', 'Ford Endevour', '900010', 'COVERAGE-LEVEL'),
+('160011', '300011', '100009', '2011-12-11', '2011-12-11', '2016-12-11', 'Lamborghini Aventador', '900011', 'COVERAGE-LEVEL'),
+('160012', '300012', '100009', '2010-01-21', '2010-01-21', '2015-01-21', 'Porsche Carrera', '900012', 'COVERAGE-LEVEL');
 
 INSERT INTO T4_Insurance_company VALUES
-('Aegon Vehicle Insurance Company Limited','206 & 207, 2nd Floor, Aditya Trade Center, 7-1-618, Ameerpet, Hyderabad, Telangana 500038',8854364,78542563,'AegonVehicle@help.com','AegonVehicle.com','Hyderabad','AegonVehicleoffice','AegonVehicleoffice'),
-('Aviva Vehicle Insurance Company Limited', 'Towers, Sector Road, Opposite Golf Course, DLF Phase V, Sector 43, Gurgaon – 122003.',85840500,56801620,'aiaamaxVehicle@help.com','aviamaxVehicle.com','Gurgaon','aviamaxVehicleoffice','aviamaxVehicleoffice'),
-('Bajaj Allianz Vehicle Insurance Company Limited', 'Hno 6-130, 1st Floor Above ING Vysya Bank Market Road Adilabad Mancherial Andhra Pradesh Telangana',97695832,50356789,'customercare@bajajallianz.co.in','https://www.bajajallianzVehicle.com','Pune',' Bajaj Allianz Vehicle Insurance Co',' Bajaj Allianz Vehicle Insurance Co'),
-('Bharti AXA Vehicle Insurance Company Limited','130, Unit No. 1904, 19th Floor, Parinee Crescenzo, G Block, Bandra',99555754,99658932,'BhartiVehicle@help.com', 'BhartiVehicle.com', 'Mumbai', 'BhartiVehicleoffice', 'BhartiVehicleoffice'),
-('Birla Sun Vehicle Insurance Company Limited', 'One World Center, Tower 1, 16th Floor, Jupiter Mill Compound, 841, Senapati Bapat Marg, Elphinstone Road, Mumbai',97699157,50336700,'care.Vehicleinsurance@adityabirlacapital.com', 'https://Vehicleinsurance.adityabirlacapital.com', 'Mumbai ', 'Birla Sun Vehicle Insurance ', 'Birla Sun Vehicle Insurance '),
-('Canara HSBC Oriental Bank of Commerce LIC Limited','206 & 207, 2nd Floor, Aditya Trade Center, 7-1-618, Ameerpet, Hyderabad, Telangana 500038',85462548,87452563,'CanaraVehicle@help.com','CanaraVehicle.com','Hyderabad','CanaraVehicleoffice','CanaraVehicleoffice'),
-('DLF Pramerica Vehicle Insurance Company Limited', 'Office No.501- 520, on 5th floor, Bezzola Complex C.H.S. Ltd., S. No. 237, C.S. No. 353, 352/2, 353/3, 353/4, Sion Trombay Road,',98542527,85452315,'DLFVehicle@help.com','DLFVehicle.com','Sion','DLFVehicleoffice','DLFVehicleoffice'),
-('Exide Vehicle Insurance Company Limited','Registered Office: 3rd Floor, JP Techno Park, No. 3/1, Millers Road, Bangalore- 560 001, India.',97695414,50336715,'ExideVehicleInsurance@gmail.com','https://www.exideVehicle.in/','Mumbai','exidVehicleoffice','exideVehicle'),
-('Future Generali India Vehicle Insurance Company Limited','1st Floor, 7-1-21A, Raj Bhavan Rd, opp. Vehiclestyle Building, beside Vinn Hospital APDL Estates, Begumpet, Hyderabad, Telangana 500016',88740012,88749582,'FutureVehicle@help.com','FutureVehicle.com','Hyderabad','FutureVehicleoffice','FutureVehicleoffice'),
-('HDFC Vehicle Insurance Company Limited','Lodha Excelus, 13th Floor, Apollo Mills Compound, N.M. Joshi Marg, Mahalaxmi, Mumbai',97699177,NULL,'buyonline@hdfcVehicle.in','https://www.hdfcVehicle.com/','Mumbai','hdfcVehicle','hdfcVehicle'),
-('ICICI Prudential Vehicle Insurance Company Limited','1089 Appasaheb Marathe Marg, Prabhadevi, Mumbai ',97699766,50356751,'icicipruVehicle@gmail.com','https://www.icicipruVehicle.com/','Mumbai',' ICICI PruVehicle',' ICICI PruVehicle'),
-('IDBI Federal Vehicle Insurance Company Limited','3-5-922 Sri Sai Balaji Residency, Near Narayanaguda Flyover, Hyderabad, Telangana 500029',56858562,89870120,'IDBIFederalVehicle@help.com','IDBIFederalVehicle.com','Hyderabad','IDBI FederalVehicleoffice','IDBIFederalVehicleoffice'),
-('Kotak Vehicle Insurance Company Limited','Kotak Mahindra Vehicle Insurance Company Limited, Regd. Office: 2nd Floor, Plot # C- 12, G- Block, BKC, Bandra (E), Mumbai - 400 051',46598165,46598642,'KotakVehicleInsurance@help.com','KotakVehicleInsurance.com','Mumbai','kotakVehicleoffice','kotakVehicleoffice'),
-('Max Vehicle Insurance Company Limited','Max Vehicle Insurance Co. Ltd., 3rd, 11th and 12th Floor, DLF Square Building, Jacaranda Marg, DLF City Phase II, Gurugram (Haryana) - 122002',97695577,50256720,'maxVehicle@help.com','maxVehicle.com','Gurugram','maxVehicleoffice','maxVehicleoffice');
+('Aegon Insurance','Ameerpet, Hyderabad, Telangana 500038',8854364,78542563,'AegonVehicle@help.com','AegonVehicle.com','Hyderabad','AegonVehicleoffice','AegonVehicleoffice'),
+('Aviva Insurance', 'DLF Phase V, Sector 43, Gurgaon – 122003.',85840500,56801620,'aiaamaxVehicle@help.com','aviamaxVehicle.com','Gurgaon','aviamaxVehicleoffice','aviamaxVehicleoffice'),
+('Bajaj Insurance', 'Andhra Pradesh Telangana',97695832,50356789,'customercare@bajajallianz.co.in','https://www.bajajallianzVehicle.com','Pune',' Bajaj Allianz Vehicle Insurance Co',' Bajaj Allianz Vehicle Insurance Co'),
+('Bharti Insurance','Parinee Crescenzo, G Block, Bandra',99555754,99658932,'BhartiVehicle@help.com', 'BhartiVehicle.com', 'Mumbai', 'BhartiVehicleoffice', 'BhartiVehicleoffice'),
+('Birla Insurance', 'Elphinstone Road, Mumbai',97699157,50336700,'care.Vehicleinsurance@adityabirlacapital.com', 'https://Vehicleinsurance.adityabirlacapital.com', 'Mumbai ', 'Birla Sun Vehicle Insurance ', 'Birla Sun Vehicle Insurance '),
+('Canara Bank','Ameerpet, Hyderabad, Telangana 500038',85462548,87452563,'CanaraVehicle@help.com','CanaraVehicle.com','Hyderabad','CanaraVehicleoffice','CanaraVehicleoffice'),
+('DLF Insurance', 'Sion Trombay Road,',98542527,85452315,'DLFVehicle@help.com','DLFVehicle.com','Sion','DLFVehicleoffice','DLFVehicleoffice'),
+('Exide Insurance','Millers Road, Bangalore- 560 001, India.',97695414,50336715,'ExideVehicleInsurance@gmail.com','https://www.exideVehicle.in/','Mumbai','exidVehicleoffice','exideVehicle'),
+('Future Insurance','Begumpet, Hyderabad, Telangana 500016',88740012,88749582,'FutureVehicle@help.com','FutureVehicle.com','Hyderabad','FutureVehicleoffice','FutureVehicleoffice'),
+('HDFC Insurance','N.M. Joshi Marg, Mahalaxmi, Mumbai',97699177,NULL,'buyonline@hdfcVehicle.in','https://www.hdfcVehicle.com/','Mumbai','hdfcVehicle','hdfcVehicle'),
+('ICICI Insurance','Prabhadevi, Mumbai ',97699766,50356751,'icicipruVehicle@gmail.com','https://www.icicipruVehicle.com/','Mumbai',' ICICI PruVehicle',' ICICI PruVehicle'),
+('IDBI Insurance','Hyderabad, Telangana 500029',56858562,89870120,'IDBIFederalVehicle@help.com','IDBIFederalVehicle.com','Hyderabad','IDBI FederalVehicleoffice','IDBIFederalVehicleoffice'),
+('Kotak Insurance','Bandra (E), Mumbai - 400 051',46598165,46598642,'KotakVehicleInsurance@help.com','KotakVehicleInsurance.com','Mumbai','kotakVehicleoffice','kotakVehicleoffice'),
+('Max Insurance','Gurugram (Haryana) - 122002',97695577,50256720,'maxVehicle@help.com','maxVehicle.com','Gurugram','maxVehicleoffice','maxVehicleoffice');
 
 INSERT INTO T4_Vehicle_service VALUES
 ('Engine Change', '200001', '100001', 'Sales dept', 'Pune', '92385102345', 'Poonam', 'AA'),
@@ -334,16 +335,16 @@ INSERT INTO T4_Vehicle_service VALUES
 ('Steering Change', '200005', '100005', 'Admin Dept', 'Tripura', '9105273912', 'Anant', 'EE'),
 ('Rotate tires', '200006', '100006', 'Maintainence Dept', 'Orissa', '9205617289', 'Udit', 'FF'),
 ('Oil filter', '200007', '100007', 'Production Dept', 'Himachal', '9081267673', 'Prateek', 'GG'),
-('Fuel Filter', '200008', '100008', 'Finance Dept', 'Kashmir', '8234510238', 'Pratham', 'HH'),
+('Fuel Filter', '200008', '100008', 'Finance Dept ', 'Kashmir', '8234510238', 'Pratham', 'HH'),
 ('Battery Check', '200009', '100008', 'Operations Dept', 'Kolkata', '8293562396', 'Rohit', 'II'),
-('Body Paint', '200010', '100009', 'Purchase Dept', 'Gujurat', '72306283956', 'Rahul', 'JJ'),
-('Engine Change', '200011', '100009', 'Project Dept', 'Rajasthan', '7829357283', 'Tommy', 'KK'),
-('Engine Change', '200012', '100009', 'Admin Dept', 'Jaipur', '7788912351', 'Sakura', 'LL'),
-('Rotate tires', '200013', '100010', 'Maintainence Dept', 'Raipur', '9023231235', 'Rohan', 'MM'),
-('Battery Check', '200014', '100011', 'R&D Dept', 'Dhaka', '9023189122', 'Rooma', 'NN'),
-('AC Work', '200015', '100012', 'Finance Dept', 'Shimla', '7781923512', 'Connor', 'OO');
+('Water Filter', '200010', '100009', 'Purchase Dept', 'Gujurat', '72306283956', 'Rahul', 'JJ'),
+('Headlights', '200011', '100009', 'Project Dept', 'Rajasthan', '7829357283', 'Tommy', 'KK'),
+('Taillights', '200012', '100009', 'Admin Dept', 'Jaipur', '7788912351', 'Sakura', 'LL'),
+('Clean', '200013', '100010', 'Maintainence Dept', 'Raipur', '9023231235', 'Rohan', 'MM'),
+('Engine check', '200014', '100011', 'R&D Dept', 'Dhaka', '9023189122', 'Rooma', 'NN'),
+('Accelerator', '200015', '100012', 'Finance Dept', 'Shimla', '7781923512', 'Connor', 'OO');
 
-INSERT INTO t3_INSURANCE_POLICY_COVERAGE VALUES
+INSERT INTO T4_INSURANCE_POLICY_COVERAGE VALUES
 ('400001','800001'),
 ('400002','800002'),
 ('400003','800003'),
