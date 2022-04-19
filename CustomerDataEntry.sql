@@ -173,7 +173,25 @@ INSERT INTO T4_Receipt
 ('140012', 'PREMIUM_PAYMENT_ID', '100012', 780, '2020-01-13'),
 ('140013', 'PREMIUM_PAYMENT_ID', '100013', 230, '2020-01-15'),
 ('140014', 'PREMIUM_PAYMENT_ID', '100014', 320, '2020-01-16'),
-('140015', 'PREMIUM_PAYMENT_ID', '100015', 480, '2020-01-17'),
+('140015', 'PREMIUM_PAYMENT_ID', '100015', 480, '2020-01-17');
+
+-- T4_NOK
+INSERT INTO T4_NOK
+('150001', '400001', '100001', 'Abhigyan','Hyderabad','9541284125', 'Single', 'Male'),
+('150002', '400002', '100002', 'Nishita','Bangalore','9871284354', 'Married', 'Female'),
+('150003', '400003', '100003', 'Udita','Pune','8274141254', 'Single', 'Female'),
+('150004', '400004', '100004', 'Krishna','Mumbai','8423652322', 'Married', 'Male'),
+('150005', '400005', '100005', 'Abhishek','Kolkata','7541265455', 'Single', 'Male'),
+('150006', '400006', '100006', 'Harshit','Pune','8741236525', 'Married', 'Male'),
+('150007', '400007', '100007', 'Aisha','Vadodara','8296321466', 'Single', 'Female'),
+('150008', '400008', '100008', 'Divya','Bangalore','9563214552', 'Married', 'Female'),
+('150009', '400009', '100009', 'Kritika','New Delhi','7851254125', 'Single', 'Female'),
+('150010', '400010', '100010', 'Shubham','Hyderabad','7963214502', 'Married', 'Male'),
+('150011', '400011', '100011', 'Maurya','Mumbai','8604154632', 'Single', 'Male'),
+('150012', '400012', '100012', 'Michael','Bangalore','6387908561', 'Married', 'Male'),
+('150013', '400013', '100013', 'Jagrut','Pune','7507081126', 'Single', 'Male'),
+('150014', '400014', '100014', 'Rhea','Chennai','8007796961', 'Married', 'Female'),
+('150015', '400015', '100015', 'Shivangi','Chennai','9845106575', 'Single', 'Female');
 
 -- Product ID Not Added
 -- Coverage Level Not Added
