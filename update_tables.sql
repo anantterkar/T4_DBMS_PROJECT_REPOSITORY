@@ -25,7 +25,7 @@ INSERT INTO T4_Insurance_company VALUES
 ('DLF Insurance', 'Sion Trombay Road,',98542527,85452315,'DLFVehicle@help.com','DLFVehicle.com','Sion','DLFVehicleoffice','DLFVehicleoffice'),
 ('Exide Insurance','Millers Road, Bangalore- 560 001, India.',97695414,50336715,'ExideVehicleInsurance@gmail.com','https://www.exideVehicle.in/','Mumbai','exidVehicleoffice','exideVehicle'),
 ('Future Insurance','Begumpet, Hyderabad, Telangana 500016',88740012,88749582,'FutureVehicle@help.com','FutureVehicle.com','Hyderabad','FutureVehicleoffice','FutureVehicleoffice'),
-('HDFC Insurance','N.M. Joshi Marg, Mahalaxmi, Mumbai',97699177,NULL,'buyonline@hdfcVehicle.in','https://www.hdfcVehicle.com/','Mumbai','hdfcVehicle','hdfcVehicle'),
+('HDFC Insurance','N.M. Joshi Marg, Mahalaxmi, Mumbai',97699177,88742069,'buyonline@hdfcVehicle.in','https://www.hdfcVehicle.com/','Mumbai','hdfcVehicle','hdfcVehicle'),
 ('ICICI Insurance','Prabhadevi, Mumbai ',97699766,50356751,'icicipruVehicle@gmail.com','https://www.icicipruVehicle.com/','Mumbai',' ICICI PruVehicle',' ICICI PruVehicle'),
 ('IDBI Insurance','Hyderabad, Telangana 500029',56858562,89870120,'IDBIFederalVehicle@help.com','IDBIFederalVehicle.com','Hyderabad','IDBI FederalVehicleoffice','IDBIFederalVehicleoffice'),
 ('Kotak Insurance','Bandra (E), Mumbai - 400 051',46598165,46598642,'KotakVehicleInsurance@help.com','KotakVehicleInsurance.com','Mumbai','kotakVehicleoffice','kotakVehicleoffice'),
@@ -52,7 +52,7 @@ INSERT INTO T4_Office VALUES
 ('Pathak Limited', 'Deeksha Pathak', '4747474747', 'Mumbai', 1600000,"", 'Admin Dept', 'Bajaj Insurance'),
 ('Rai Co', 'Balwant Rai', '3245678541', 'Mumbai', 1700000,"", 'Maintainence Dept', 'Canara Bank'),
 ('Raj and sons', 'Krishna Raj', '8769543211', 'Pune', 1800000,"", 'Production Dept', 'Birla Insurance'),
-('Bandhu Limited', 'Rama Bandhu', '2341675897', 'Hyderbad', 1900000,"", 'Finance Dept ', 'Birla Insurance'),
+('Bandhu Limited', 'Rama Bandhu', '2341675897', 'Hyderbad', 1900000,"", 'Finance Dept', 'Birla Insurance'),
 ('Preeti LLC', 'Preeti Rai', '9876987652', 'Hyderbad', 1100000,"", 'Operations Dept','Canara Bank'),
 ('Kamal Inc', 'Kamal Kaushik', '4356273891', 'Delhi',1000000,"", 'Purchase Dept', 'Canara Bank'),
 ('Singh Limited', 'Rai Singh', '678781155', 'Pune', 1250000,"", 'Project Dept','ICICI Insurance'),
@@ -64,7 +64,7 @@ INSERT INTO T4_Office VALUES
 INSERT INTO T4_Vehicle VALUES
 ('200001','100001','205834',NULL, NULL,1400000  ,'SUV'      ,60 ,6,'Morris Garages',239034,392618, NULL,'2LX1876789'),
 ('200002','100002','243542',NULL, NULL,1000000  ,'Sedan'    ,40 ,4,'Hyundai'    ,942618,563810,NULL,'1MR5534254'),
-('200003','100003','546535',NULL, NULL,2500000  ,'MUV'      ,80 ,5,'Toyota'     ,234523,234934,NULL,'2RX3754563'),
+('200003','100003','546535',NULL, NULL,2500000  ,'MUV'      ,80 ,5,'Toyota'     ,236923,234934,NULL,'2RX3754563'),
 ('200004','100004','029348',NULL, NULL,24000000 ,'Coupe'    ,100,4,'Mercedes'   ,543223,641542,NULL,'1LX4345654'),
 ('200005','100005','234899',NULL, NULL,900000   ,'Sedan'    ,50 ,4,'Volkswagen' ,673432,213479,NULL,'4LT3765655'),
 ('200006','100006','546089',NULL, NULL,1100000  ,'Sedan'    ,40 ,4,'Toyota'     ,234523,923843,NULL,'1YC4958364'),
@@ -111,9 +111,9 @@ INSERT INTO T4_Insurance_policy VALUES
 ('400011', '300011', '100009', 'Production Dept', '108', '2014-11-01', '2015-11-01', 'Coverage accident,fire,natural calamities'),
 ('400012', '300012', '100009', 'R&D Dept', '102', '2012-12-01', '2013-12-01', 'Coverage against self-ignition'),
 ('400013', '300013', '100010', 'Sales Dept', '103', '2020-01-01', '2021-01-01', 'Coverage against a legal liability for the damage you may cause'),
-('400014', '300014', '100011', 'Finance Dept ', '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
+('400014', '300014', '100011', 'Finance Dept', '104', '2019-02-01', '2020-02-01', 'Liability Coverage'),
 ('400015', '300015', '100012', 'Maintainence Dept', '105', '2008-03-01', '2009-03-01', 'Coverage against theft'),
-('400016', '300016', '100013', 'Finance Dept ', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle');
+('400016', '300016', '100013', 'Finance Dept', '106', '2016-04-01', '2017-04-01', 'Coverage against loss of or damage to your vehicle');
 
 INSERT INTO T4_NOK VALUES
 ('150001', '400001', '100001', 'Abhigyan','Hyderabad',95412125, 'Single', 'M'),
@@ -171,7 +171,7 @@ INSERT INTO T4_Vehicle_service VALUES
 ('Steering Change', '200005', '100005', 'Admin Dept', 'Tripura', '9105273912', 'Anant', 'EE'),
 ('Rotate tires', '200006', '100006', 'Maintainence Dept', 'Orissa', '9205617289', 'Udit', 'FF'),
 ('Oil filter', '200007', '100007', 'Production Dept', 'Himachal', '9081267673', 'Prateek', 'GG'),
-('Fuel Filter', '200008', '100008', 'Finance Dept ', 'Kashmir', '8234510238', 'Pratham', 'HH'),
+('Fuel Filter', '200008', '100008', 'Finance Dept', 'Kashmir', '8234510238', 'Pratham', 'HH'),
 ('Battery Check', '200009', '100008', 'Operations Dept', 'Kolkata', '8293562396', 'Rohit', 'II'),
 ('Water Filter', '200010', '100009', 'Purchase Dept', 'Gujurat', '72306283956', 'Rahul', 'JJ'),
 ('Headlights', '200011', '100009', 'Project Dept', 'Rajasthan', '7829357283', 'Tommy', 'KK'),
