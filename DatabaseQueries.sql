@@ -188,6 +188,17 @@ BEGIN
 
     RETURN abs_inst;
 END; $$
+-------------------------------------------------------------------------------
+DELIMITER $$
+CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    SET abs_inst = 
+    CAST(CONCAT(SUBSTR(vehicle_num,3,2),SUBSTR(vehicle_num,7,4)) AS UNSIGNED);
+    RETURN abs_inst;
+END; $$
 
 SELECT T4_Vehicle.*
 FROM T4_Vehicle
