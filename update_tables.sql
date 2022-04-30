@@ -327,17 +327,43 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE T4_Vehicle
 
 SET Vehicle_number = 
-CASE WHEN Vehicle_id = "200001" THEN "test1" 
-	 WHEN Vehicle_id = "200002" THEN "test2" 
-	 WHEN Vehicle_id = "200003" THEN "test3" 
-     WHEN Vehicle_id = "200004" THEN "test4"
+CASE 
+     WHEN Vehicle_id = "200001" THEN "AP15AV8598" 
+	 WHEN Vehicle_id = "200002" THEN "DD22VD8649" 
+	 WHEN Vehicle_id = "200003" THEN "HP65GD9846" 
+     WHEN Vehicle_id = "200004" THEN "MZ63TE7147"
+	 WHEN Vehicle_id = "200005" THEN "NL12HD7524"
+	 WHEN Vehicle_id = "200006" THEN "SK84VC8365"
+	 WHEN Vehicle_id = "200007" THEN "UP34CX9564"
+	 WHEN Vehicle_id = "200008" THEN "WB25ZT1648"
+	 WHEN Vehicle_id = "200009" THEN "OR62YE8343"
+	 WHEN Vehicle_id = "200010" THEN "MP34KG4764"
+	 WHEN Vehicle_id = "200011" THEN "LD56OP7464"
+	 WHEN Vehicle_id = "200012" THEN "UP11BE6743"
+	 WHEN Vehicle_id = "200013" THEN "DL19PX2537"
+	 WHEN Vehicle_id = "200014" THEN "TS82PS9372"
+	 WHEN Vehicle_id = "200015" THEN "AP12AN4398"
+
 END,
 
 Vehicle_registration_number = 
-CASE WHEN Vehicle_id = "200001" THEN "numbert1" 
-	 WHEN Vehicle_id = "200002" THEN "numbert2" 
-	 WHEN Vehicle_id = "200003" THEN "numbert3"  
-     WHEN Vehicle_id = "200004" THEN "numbert4" 
+CASE 
+     WHEN Vehicle_id = "200001" THEN "235479"
+	 WHEN Vehicle_id = "200002" THEN "724589"
+	 WHEN Vehicle_id = "200003" THEN "456379"
+     WHEN Vehicle_id = "200004" THEN "328795"
+	 WHEN Vehicle_id = "200005" THEN "345787"
+	 WHEN Vehicle_id = "200006" THEN "493578"
+	 WHEN Vehicle_id = "200007" THEN "345789"
+	 WHEN Vehicle_id = "200008" THEN "234789"
+	 WHEN Vehicle_id = "200009" THEN "987345"
+	 WHEN Vehicle_id = "200010" THEN "324087"
+	 WHEN Vehicle_id = "200011" THEN "234780"
+	 WHEN Vehicle_id = "200012" THEN "784556"
+	 WHEN Vehicle_id = "200013" THEN "653489"
+	 WHEN Vehicle_id = "200014" THEN "589023"
+	 WHEN Vehicle_id = "200015" THEN "234809"
+	 WHEN Vehicle_id = "200016" THEN "243078"
 END,
 
 Dependent_nok_id = 
@@ -370,21 +396,21 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE T4_Receipt
 SET Premium_Payment_id = 
 CASE 
-     WHEN receipt_id = "140001" THEN "700001" 
-	 WHEN receipt_id = "140002" THEN "700002" 
-	 WHEN receipt_id = "140003" THEN "700003" 
-     WHEN receipt_id = "140004" THEN "700004"
-	 WHEN receipt_id = "140005" THEN "700005"
-	 WHEN receipt_id = "140006" THEN "700006"
-	 WHEN receipt_id = "140007" THEN "700007"
-	 WHEN receipt_id = "140008" THEN "700008"
-	 WHEN receipt_id = "140009" THEN "700009"
-	 WHEN receipt_id = "140010" THEN "700010"
-	 WHEN receipt_id = "140011" THEN "700011"
-	 WHEN receipt_id = "140012" THEN "700012"
-	 WHEN receipt_id = "140013" THEN "700013"
-	 WHEN receipt_id = "140014" THEN "700014"
-	 WHEN receipt_id = "140015" THEN "700015"
+     WHEN receipt_id = "140001" THEN "700002" 
+	 WHEN receipt_id = "140002" THEN "700013" 
+	 WHEN receipt_id = "140003" THEN "700010" 
+     WHEN receipt_id = "140004" THEN "700012"
+	 WHEN receipt_id = "140005" THEN "700008"
+	 WHEN receipt_id = "140006" THEN "700005"
+	 WHEN receipt_id = "140007" THEN "700003"
+	 WHEN receipt_id = "140008" THEN "700004"
+	 WHEN receipt_id = "140009" THEN "700015"
+	 WHEN receipt_id = "140010" THEN "700007"
+	 WHEN receipt_id = "140011" THEN "700006"
+	 WHEN receipt_id = "140012" THEN "700009"
+	 WHEN receipt_id = "140013" THEN "700014"
+	 WHEN receipt_id = "140014" THEN "700011"
+	 WHEN receipt_id = "140015" THEN "700001"
 END;
 
 SET SQL_SAFE_UPDATES = 1;
