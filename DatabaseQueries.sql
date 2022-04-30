@@ -138,10 +138,11 @@ AND department_location_count(Company_name) > 1;
 
 -- 4
 
--- Select Customers who have more than one Vehicle, where the premium for one of the
+-- Select Customers who have more than one Vehicle, 
+-- where the premium for one of the
 -- Vehicles is not paid and it is involved in accident
 
--- i.e the same vehicle MUST have both unpaid premium and an incident record
+-- i.e the same vehicle MUST have both unpaid premium and an incident recor
 -- there is no boolean confirming premium payment so it is verified using only the date
 
 SELECT T4_Customer.*

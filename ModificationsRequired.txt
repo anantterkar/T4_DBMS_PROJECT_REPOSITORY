@@ -1,0 +1,39 @@
+-----------------------------------TASK 1--------------------------------------------------------
+
+
+3.	Retrieve Company details whose number of products is greater than departments, 
+where the departments are located in more than one location
+
+Modifications Required : company, product, departments, office
+
+Reason: Firstly, understand query 3.
+* product_count() function returns the number of products for a given company_id
+* department_count() function returns the number of departments for a given company_id
+* department_location_count() returns UNIQUE addresses for the given office of a company
+
+Things to do: Increase product count such that prod_count() > dept_count()
+AND add office places to have more than one CITY
+
+---------------------------------------------------------------------------------------------------
+
+-----------------------------------TASK 2----------------------------------------------------------
+
+4.Select Customers who have more than one Vehicle, where the premium for one of the Vehicles
+  is not paid and it is involved in accident
+
+  "WHERE T4_Premium_Payment.RECEIPT_ID IS NULL   -- i.e. Payment is not done hence recipt not generated"
+  is one of the lines in the query file
+
+  "AND T4_Incident.INCIDENT_TYPE LIKE "ACCIDENT""
+  this entry has a different category of inputs. Fix it into types containing Accidents
+  --------------------------------------------------------------------------------------------------
+-----------------------------------TASK 3----------------------------------------------------------
+Old sql insertion file (non null values) -> new sql insertion file(in the commands)
+use the case when thingy to copy the values from the old table
+  --------------------------------------------------------------------------------------------------
+-----------------------------------TASK 4----------------------------------------------------------
+single/double quotations are missing, find them and fill data (low priority,but visible in the query statements)
+____________________________________________________________________________________________________
+
+
+  May need more Modifications further, but will be minor.
