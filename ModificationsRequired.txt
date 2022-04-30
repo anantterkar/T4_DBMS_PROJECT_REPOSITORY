@@ -14,6 +14,10 @@ Reason: Firstly, understand query 3.
 Things to do: Increase product count such that prod_count() > dept_count()
 AND add office places to have more than one CITY
 
+SELECT product_count(Company_name),department_count(Company_name),department_location_count(Company_name)
+FROM T4_Insurance_Company;
+
+
 ---------------------------------------------------------------------------------------------------
 
 -----------------------------------TASK 2----------------------------------------------------------

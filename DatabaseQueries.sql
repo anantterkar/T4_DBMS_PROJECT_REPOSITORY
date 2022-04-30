@@ -124,7 +124,7 @@ DETERMINISTIC
 BEGIN
     DECLARE loc_count INTEGER;
     SET loc_count = 
-    (SELECT COUNT(DISTINCT(Office)) FROM t4_department
+    (SELECT COUNT(DISTINCT(Address)) FROM t4_office
      WHERE Company_name = comp_name);
 
     RETURN loc_count;
