@@ -1,4 +1,6 @@
 TASK 1 done (udit)
+
+command - git log --follow -p -- CustomerDataEntry.sql
 -----------------------------------TASK 2----------------------------------------------------------
 4.Select Customers who have more than one Vehicle, where the premium for one of the Vehicles
   is not paid and it is involved in accident
