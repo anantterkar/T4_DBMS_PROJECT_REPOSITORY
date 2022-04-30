@@ -32,17 +32,17 @@ INSERT INTO T4_Insurance_company VALUES
 ('Max Insurance','Gurugram (Haryana) - 122002',97695577,50256720,'maxVehicle@help.com','maxVehicle.com','Gurugram','maxVehicleoffice','maxVehicleoffice');
 
 INSERT INTO T4_Department VALUES
-('Sales Dept','Aegon Insurance', 'Bhatt Limited', '9587462587', '','Udit'),
-('R&D Dept','Aviva Insurance', 'Reddy Co', '9752145698', '','Prateek'),
-('Accounts Dept','Bajaj Insurance', 'Ali inc', '9658742165', '','Anant'),
-('HR Dept','Bharti Insurance', 'Sharma and Sons', '7896584256', '','Amit'),
-('Admin Dept','Birla Insurance', 'Pathak Limited', '8457963215', '','Rohit'),
-('Maintainence Dept','Canara Bank', 'Rai Co', '8699547125', '','Rahul'),
-('Production Dept','DLF Insurance', 'Raj and sons', '9987458216', '','Pratham'),
-('Finance Dept','Exide Insurance', 'Bandhu Limited', '9876586215', '','Kapil'),
-('Operations Dept','Future Insurance', 'Preeti LLC', '7856548236', '','Modi'),
-('Purchase Dept','HDFC Insurance', 'Kamal Inc', '9987458625', '','Pramod'),
-('Project Dept','ICICI Insurance', 'Singh Limited', '7854956523', '','Ram');
+('Sales Dept','Aegon Insurance', 'Bhatt Limited', '9587462587', 'Jagdish Mehta, Jasmeet Jagan, Sunil Sujeet','Udit'),
+('R&D Dept','Aviva Insurance', 'Reddy Co', '9752145698', 'Jasmeet Bundir, Kathar Prasan, Sudeep Jain','Prateek'),
+('Accounts Dept','Bajaj Insurance', 'Ali inc', '9658742165', 'Rajnit Subhash, Anant Dave, Rakesh Mishra','Anant'),
+('HR Dept','Bharti Insurance', 'Sharma and Sons', '7896584256', 'Pranav','Amit'),
+('Admin Dept','Birla Insurance', 'Pathak Limited', '8457963215', 'Pramitiru, Astansha','Rohit'),
+('Maintainence Dept','Canara Bank', 'Rai Co', '8699547125', 'Jamith Rao, Sadhak Pandya','Rahul'),
+('Production Dept','DLF Insurance', 'Raj and sons', '9987458216', 'Kushi Mehta','Pratham'),
+('Finance Dept','Exide Insurance', 'Bandhu Limited', '9876586215', 'Intis Khan, Hasib Bisah','Kapil'),
+('Operations Dept','Future Insurance', 'Preeti LLC', '7856548236', 'Jussain Boult','Modi'),
+('Purchase Dept','HDFC Insurance', 'Kamal Inc', '9987458625', 'Kashmir Khan','Pramod'),
+('Project Dept','ICICI Insurance', 'Singh Limited', '7854956523', 'Indira Ihdnag,Hasik Nujag','Ram');
 
 INSERT INTO T4_Office VALUES 
 ('Bhatt Limited', 'Vishesh Bhatt', '1212121212', 'Lucknow', 1200000,"", 'Sales Dept', 'Kotak Insurance'),
@@ -265,21 +265,22 @@ INSERT INTO T4_Incident_Report  VALUES
 ('600014','500014','100014','Ajmal',250000,'Lightning','Insurance plan that covers the insured person against both'),
 ('600015','500015','100015','Sundar',17000,'Damage','Vehicle damaged by jilted lover');
 
+-- T4_Claim
 INSERT INTO T4_Claim VALUES
-('110001', '100001', '400001', 50000, '500001', 'Vandalism', '2020-10-01', 'Approved'),
-('110002', '100002', '400002', 20000, '500002', 'Animal collisions', '2020-09-10', 'Rejected'),
-('110003', '100003', '400003', 350000, '500003', 'Accident', '2020-11-01', 'Pending'),
+('110001', '100001', '400001', 50000, '500001', 'Vehicle Disfigurement', '2020-10-01', 'Approved'),
+('110002', '100002', '400002', 20000, '500002', 'Pedestrian Injury', '2020-09-10', 'Rejected'),
+('110003', '100003', '400003', 350000, '500003','Accident', '2020-11-01', 'Pending'),
 ('110004', '100004', '400004', 70000, '500004', 'Windshield damage', '2020-06-30', 'Approved'),
-('110005', '100005', '400005', 350000, '500005', 'Accident', '2020-12-25', 'Rejected'),
-('110006', '100006', '400006', 60000, '500006', 'Animal collisions', '2021-10-10', 'Pending'),
-('110007', '100007', '400007', 450000, '500007', 'Accident', '2019-05-15', 'Rejected'),
+('110005', '100005', '400005', 350000, '500005','Chassis Disfigured', '2020-12-25', 'Rejected'),
+('110006', '100006', '400006', 60000, '500006', 'Engine Overload', '2021-10-10', 'Pending'),
+('110007', '100007', '400007', 450000, '500007','Windows Shattered', '2019-05-15', 'Rejected'),
 ('110008', '100008', '400008', 50000, '500008', 'Windshield damage', '2020-03-03', 'Approved'),
 ('110009', '100009', '400009', 30000, '500009', 'Vandalism', '2020-07-18', 'Approved'),
-('110010', '100010', '400010', 750000, '500010', 'Accident', '2021-09-11', 'Pending'),
+('110010', '100010', '400010', 750000, '500010','Transmission Broken', '2021-09-11', 'Pending'),
 ('110011', '100011', '400011', 10000, '500011', 'Animal collisions', '2020-11-01', 'Approved'),
-('110012', '100012', '400012', 250000, '500012', 'Accident', '2020-02-20', 'Pending'),
-('110013', '100013', '400013', 22000, '500013', 'Vandalism', '2020-05-24', 'Rejected'),
-('110014', '100014', '400014', 880000, '500014', 'Accident', '2020-07-14', 'Approved'),
+('110012', '100012', '400012', 250000, '500012','Tyre Burst', '2020-02-20', 'Pending'),
+('110013', '100013', '400013', 22000, '500013', 'Skull Fracture', '2020-05-24', 'Rejected'),
+('110014', '100014', '400014', 880000, '500014','Loss of Life', '2020-07-14', 'Approved'),
 ('110015', '100015', '400015', 22000, '500015', 'Animal collisions', '2020-11-04', 'Rejected'),
 ('110016', '100001', '400016', 22000, '500012', 'Accident', '2020-01-22', 'Pending');
 
@@ -326,17 +327,43 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE T4_Vehicle
 
 SET Vehicle_number = 
-CASE WHEN Vehicle_id = "200001" THEN "test1" 
-	 WHEN Vehicle_id = "200002" THEN "test2" 
-	 WHEN Vehicle_id = "200003" THEN "test3" 
-     WHEN Vehicle_id = "200004" THEN "test4"
+CASE 
+     WHEN Vehicle_id = "200001" THEN "AP15AV8598" 
+	 WHEN Vehicle_id = "200002" THEN "DD22VD8649" 
+	 WHEN Vehicle_id = "200003" THEN "HP65GD9846" 
+     WHEN Vehicle_id = "200004" THEN "MZ63TE7147"
+	 WHEN Vehicle_id = "200005" THEN "NL12HD7524"
+	 WHEN Vehicle_id = "200006" THEN "SK84VC8365"
+	 WHEN Vehicle_id = "200007" THEN "UP34CX9564"
+	 WHEN Vehicle_id = "200008" THEN "WB25ZT1648"
+	 WHEN Vehicle_id = "200009" THEN "OR62YE8343"
+	 WHEN Vehicle_id = "200010" THEN "MP34KG4764"
+	 WHEN Vehicle_id = "200011" THEN "LD56OP7464"
+	 WHEN Vehicle_id = "200012" THEN "UP11BE6743"
+	 WHEN Vehicle_id = "200013" THEN "DL19PX2537"
+	 WHEN Vehicle_id = "200014" THEN "TS82PS9372"
+	 WHEN Vehicle_id = "200015" THEN "AP12AN4398"
+
 END,
 
 Vehicle_registration_number = 
-CASE WHEN Vehicle_id = "200001" THEN "numbert1" 
-	 WHEN Vehicle_id = "200002" THEN "numbert2" 
-	 WHEN Vehicle_id = "200003" THEN "numbert3"  
-     WHEN Vehicle_id = "200004" THEN "numbert4" 
+CASE 
+     WHEN Vehicle_id = "200001" THEN "235479"
+	 WHEN Vehicle_id = "200002" THEN "724589"
+	 WHEN Vehicle_id = "200003" THEN "456379"
+     WHEN Vehicle_id = "200004" THEN "328795"
+	 WHEN Vehicle_id = "200005" THEN "345787"
+	 WHEN Vehicle_id = "200006" THEN "493578"
+	 WHEN Vehicle_id = "200007" THEN "345789"
+	 WHEN Vehicle_id = "200008" THEN "234789"
+	 WHEN Vehicle_id = "200009" THEN "987345"
+	 WHEN Vehicle_id = "200010" THEN "324087"
+	 WHEN Vehicle_id = "200011" THEN "234780"
+	 WHEN Vehicle_id = "200012" THEN "784556"
+	 WHEN Vehicle_id = "200013" THEN "653489"
+	 WHEN Vehicle_id = "200014" THEN "589023"
+	 WHEN Vehicle_id = "200015" THEN "234809"
+	 WHEN Vehicle_id = "200016" THEN "243078"
 END,
 
 Dependent_nok_id = 
@@ -345,6 +372,18 @@ CASE
 	 WHEN Vehicle_id = "200002" THEN "150002" 
 	 WHEN Vehicle_id = "200003" THEN "150003" 
      WHEN Vehicle_id = "200004" THEN "150004"
+	 WHEN Vehicle_id = "200005" THEN "150005"
+	 WHEN Vehicle_id = "200006" THEN "150006"
+	 WHEN Vehicle_id = "200007" THEN "150007"
+	 WHEN Vehicle_id = "200008" THEN "150008"
+	 WHEN Vehicle_id = "200009" THEN "150009"
+	 WHEN Vehicle_id = "200010" THEN "150010"
+	 WHEN Vehicle_id = "200011" THEN "150011"
+	 WHEN Vehicle_id = "200012" THEN "150012"
+	 WHEN Vehicle_id = "200013" THEN "150013"
+	 WHEN Vehicle_id = "200014" THEN "150014"
+	 WHEN Vehicle_id = "200015" THEN "150015"
+
 END;
 
 SET SQL_SAFE_UPDATES = 1;
@@ -357,13 +396,22 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE T4_Receipt
 SET Premium_Payment_id = 
 CASE 
-     WHEN receipt_id = "140001" THEN "700001" 
-	 WHEN receipt_id = "140002" THEN "700002" 
-	 WHEN receipt_id = "140003" THEN "700003" 
-     WHEN receipt_id = "140004" THEN "700004"
+     WHEN receipt_id = "140001" THEN "700002" 
+	 WHEN receipt_id = "140002" THEN "700013" 
+	 WHEN receipt_id = "140003" THEN "700010" 
+     WHEN receipt_id = "140004" THEN "700012"
+	 WHEN receipt_id = "140005" THEN "700008"
+	 WHEN receipt_id = "140006" THEN "700005"
+	 WHEN receipt_id = "140007" THEN "700003"
+	 WHEN receipt_id = "140008" THEN "700004"
+	 WHEN receipt_id = "140009" THEN "700015"
+	 WHEN receipt_id = "140010" THEN "700007"
+	 WHEN receipt_id = "140011" THEN "700006"
+	 WHEN receipt_id = "140012" THEN "700009"
+	 WHEN receipt_id = "140013" THEN "700014"
+	 WHEN receipt_id = "140014" THEN "700011"
+	 WHEN receipt_id = "140015" THEN "700001"
 END;
 
 SET SQL_SAFE_UPDATES = 1;
 -- END EXECUTION HERE TO RETURN TO SAFE MODE -- PLEASE DO NOT IGNORE THIS LINE
-
-
