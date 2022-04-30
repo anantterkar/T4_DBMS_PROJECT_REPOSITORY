@@ -86,6 +86,55 @@ ON T4_Insurance_Company.Company_name = T4_Office.Company_name
 GROUP BY T4_Product.Company_name, T4_Department.Company_name
 HAVING COUNT(T4_Product.Company_name) > COUNT(T4_Department.Company_name)
 AND COUNT(DISTINCT(T4_Office.Address)) > 1;
+-- not working cuz im comparing values on the inner joins
+
+DELIMITER $$
+CREATE FUNCTION product_count(comp_name VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE prod_count INTEGER;
+    SET prod_count = 
+    (SELECT COUNT(Product_number) FROM T4_Product
+     WHERE Company_name = comp_name);
+
+    RETURN prod_count;
+END; $$
+
+DELIMITER $$
+CREATE FUNCTION department_count(comp_name VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE dept_count INTEGER;
+    SET dept_count = 
+    (SELECT COUNT(Department_name) FROM t4_department
+     WHERE Company_name = comp_name);
+
+    RETURN dept_count;
+END; $$
+
+DELIMITER $$
+CREATE FUNCTION department_location_count(comp_name VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE loc_count INTEGER;
+    SET loc_count = 
+    (SELECT COUNT(DISTINCT(Office)) FROM t4_department
+     WHERE Company_name = comp_name);
+
+    RETURN loc_count;
+END; $$
+
+SELECT T4_Insurance_Company.*
+FROM T4_Insurance_Company
+WHERE product_count(Company_name) > department_count(Company_name)
+AND department_location_count(Company_name) > 1;
+
 
 -- 4
 
