@@ -18,16 +18,16 @@ AND CLAIM_STATUS LIKE "PENDING");        -- Input DATA capitalization unknown
 -- vehicle was involved in the incident.
 -- To get the specific vehicle/s,the claim_settlement table must be used
 
-SELECT T4_Customer.*,T4_Vehicle.* 
-FROM T4_Customer
-INNER JOIN T4_Vehicle
-ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
-INNER JOIN T4_Claim_Settlement
-ON T4_Claim_Settlement.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
-WHERE T4_Claim.INCIDENT_ID IS NOT NULL
-AND T4_Claim.CLAIM_STATUS LIKE "PENDING";
+-- SELECT T4_Customer.*,T4_Vehicle.* 
+-- FROM T4_Customer
+-- INNER JOIN T4_Vehicle
+-- ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
+-- INNER JOIN T4_Claim_Settlement
+-- ON T4_Claim_Settlement.CUST_ID = T4_Customer.CUST_ID
+-- INNER JOIN T4_Claim
+-- ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
+-- WHERE T4_Claim.INCIDENT_ID IS NOT NULL
+-- AND T4_Claim.CLAIM_STATUS LIKE "PENDING";
 
 -- 2
 
@@ -42,6 +42,31 @@ FROM T4_Customer
 RIGHT JOIN T4_Premium_Payment
 ON T4_Customer.CUST_ID = T4_Premium_Payment.CUST_ID  
 WHERE PREMIUM_PAYMENT_AMOUNT > (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer);
+
+-- This method requries the subquery to be (unnecessarily) run for every iteration
+
+-- Faster Method
+
+DELIMITER $$
+CREATE FUNCTION premium_over_cust_id_summation()
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE cust_id_summation INTEGER;
+    SET cust_id_summation =
+    SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer;
+
+    RETURN cust_id_summation;
+END; $$
+
+SELECT @cust_id_sum :=  premium_over_cust_id_summation();
+
+SELECT T4_Customer.*
+FROM T4_Customer
+RIGHT JOIN T4_Premium_Payment
+ON T4_Customer.CUST_ID = T4_Premium_Payment.CUST_ID  
+WHERE PREMIUM_PAYMENT_AMOUNT > @cust_id_sum;
 
 -- 3
 
