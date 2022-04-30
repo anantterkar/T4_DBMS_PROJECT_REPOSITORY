@@ -168,13 +168,41 @@ HAVING COUNT(T4_Vehicle.Cust_id) > 1;
 -- Premium Payments are linked on the Customer and not vehicles???????
 -- Diskushun Riqvirud
 
+DELIMITER $$
+CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE abs_inst INTEGER;
+    SET abs_inst = 
+     CAST( (REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE
+     (vehicle_num,'A','') ,'B','') ,'C','') ,'D','') ,'E','') 
+     ,'F','') ,'G','') ,'H','') ,'I','') ,'J','') ,'K','') ,'L','') ,'M','') 
+     ,'N','') ,'O','') ,'P','') ,'Q','') ,'R','') ,'S','') ,'T','') ,'U','') 
+     ,'V','') ,'W','') ,'X','') ,'Y','') ,'Z','')) AS UNSIGNED);
+
+    RETURN abs_inst;
+END; $$
+
 SELECT T4_Vehicle.*
 FROM T4_Vehicle
 INNER JOIN T4_Customer
 ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
 INNER JOIN T4_Premium_Payment
 ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-WHERE CAST(T4_Vehicle.Vehicle_number AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
+WHERE vehicle_number_convert(T4_Vehicle.Vehicle_number) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
+
+-- SELECT T4_Vehicle.*
+-- FROM T4_Vehicle
+-- INNER JOIN T4_Customer
+-- ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
+-- INNER JOIN T4_Premium_Payment
+-- ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
+-- WHERE CAST(T4_Vehicle.Vehicle_number AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
 
 -- 6
 -- Retrieve Customer details whose Claim Amount is less than Coverage Amount and Claim
