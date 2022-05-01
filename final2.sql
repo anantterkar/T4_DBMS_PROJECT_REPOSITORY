@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS T4_Application
 (
 	APPLICATION_ID VARCHAR(20) PRIMARY KEY,
     CUST_ID VARCHAR(20),
-    VEHICLE_ID VARCHAR(20) NOT NULL, -- ADD THE FOREIGN KEY FOR THIS LATER ----------
+    VEHICLE_ID VARCHAR(20) NOT NULL, 
     APPLICATION_STATUS VARCHAR(8) NOT NULL CHECK (APPLICATION_STATUS IN ('Pending', 'Rejected', 'Accepted')),
     COVERAGE VARCHAR(50) NOT NULL,
     FOREIGN KEY (CUST_ID) REFERENCES T4_Customer(CUST_ID)
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS T4_Quote
     VALID_FROM_DATE DATE NOT NULL,
     VALID_TILL_DATE DATE NOT NULL,
     DESCRIPTION VARCHAR(100) NOT NULL,
-    PRODUCT_ID VARCHAR(20) NOT NULL, -- ADD FOREGN KEY FOR THIS LATER ----------
+    PRODUCT_ID VARCHAR(20) NOT NULL, 
     COVERAGE_LEVEL VARCHAR(20) NOT NULL,
     FOREIGN KEY (CUST_ID) REFERENCES T4_Customer(CUST_ID),
     FOREIGN KEY (APPLICATION_ID) REFERENCES T4_Application(APPLICATION_ID)
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS T4_Premium_Payment
     POLICY_NUMBER VARCHAR(20) NOT NULL,  
     PREMIUM_PAYMENT_SCHEDULE DATE NOT NULL,
     PREMIUM_PAYMENT_AMOUNT INT NOT NULL,
-    RECEIPT_ID VARCHAR(20), -- foreign key to receipt, add later ---------
+    RECEIPT_ID VARCHAR(20), 
     
     FOREIGN KEY (CUST_ID) REFERENCES T4_Customer(CUST_ID)
 );
@@ -63,9 +63,9 @@ CREATE TABLE IF NOT EXISTS T4_Claim
 (
 	CLAIM_ID VARCHAR(20) PRIMARY KEY,
     CUST_ID VARCHAR(20) NOT NULL,
-    AGREEMENT_ID VARCHAR(20)NOT NULL, -- ADD THE FOREGN KEY FOR THIS LATER ------------
+    AGREEMENT_ID VARCHAR(20)NOT NULL, 
     CLAIM_AMOUNT INT NOT NULL,
-    INCIDENT_ID VARCHAR(20) NOT NULL, -- ADD THE FOREIGN KEY FOR THIS LATER -------------
+    INCIDENT_ID VARCHAR(20) NOT NULL, 
     DAMAGE_TYPE VARCHAR(50) NOT NULL,
     DATE_OF_CLAIM DATE NOT NULL,
     CLAIM_STATUS VARCHAR(10) NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS T4_Claim_Settlement
 	CLAIM_SETTLEMENT_ID VARCHAR(20) PRIMARY KEY,
     CLAIM_ID VARCHAR(20) NOT NULL,
     CUST_ID VARCHAR(20) NOT NULL,
-    VEHICLE_ID VARCHAR(20) NOT NULL, -- ADD FOREIGN KEY FOR THIS LATER ----------
+    VEHICLE_ID VARCHAR(20) NOT NULL, 
     DATE_SETTLED DATE NOT NULL,
     AMOUNT_PAID INT NOT NULL,
     COVERAGE_ID VARCHAR(20) NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS T4_Coverage
     COVERAGE_AMOUNT INT NOT NULL,
     COVERAGE_TYPE VARCHAR(10) NOT NULL,
     COVERAGE_LEVEL VARCHAR(15) NOT NULL CHECK (COVERAGE_LEVEL IN ('HIGH', 'MEDIUM', 'LOW')),
-    PRODUCT_ID VARCHAR(20) NOT NULL, -- ADD FOREIGN KEY FOR THIS LATER --------
+    PRODUCT_ID VARCHAR(20) NOT NULL, 
     COVERAGE_DESCRIPTION VARCHAR(100) NOT NULL,
     COVERAGE_TERMS VARCHAR(50) NOT NULL,
     COMPANY_NAME VARCHAR(20) NOT NULL
@@ -104,9 +104,9 @@ CREATE TABLE IF NOT EXISTS T4_Coverage
 -- INSERTED
 CREATE TABLE IF NOT EXISTS T4_Insurance_policy (
     Agreement_id VARCHAR(20) PRIMARY KEY,
-    Application_id VARCHAR(20) NOT NULL, -- ADDING FOREIGN KEY -------
-    Cust_id VARCHAR(20) NOT NULL, -- ADDING FOREIGN KEY --------
-    Department_name VARCHAR(20) NOT NULL, -- ADDING FOREIGN KEY --------
+    Application_id VARCHAR(20) NOT NULL,
+    Cust_id VARCHAR(20) NOT NULL,
+    Department_name VARCHAR(20) NOT NULL, 
     Policy_number VARCHAR(20) NOT NULL,
     Start_date DATE NOT NULL,
     Expiry_date DATE NOT NULL,
@@ -116,10 +116,10 @@ CREATE TABLE IF NOT EXISTS T4_Insurance_policy (
 -- INSERTED
 CREATE TABLE IF NOT EXISTS T4_Vehicle (
     Vehicle_id VARCHAR(20) PRIMARY KEY,
-    Cust_id VARCHAR(20) NOT NULL, -- FOREIGN KEY ------
+    Cust_id VARCHAR(20) NOT NULL,
     Policy_id VARCHAR(20) NOT NULL,
-    Dependent_nok_id VARCHAR(20), -- FOREIGN KEY , HAD TO CREATE NEXT OF KIN TABLE -------
-    Vehicle_registration_number VARCHAR(20),   -- UNIQUE NOT NULL
+    Dependent_nok_id VARCHAR(20),
+    Vehicle_registration_number VARCHAR(20),   
     Vehicle_value INT NOT NULL,
     Vehicle_type VARCHAR(20) NOT NULL,
     Vehicle_size INT NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS T4_Vehicle (
 -- INSERTED
 CREATE TABLE IF NOT EXISTS T4_Department (
     Department_name VARCHAR(20) PRIMARY KEY,
-    Company_name VARCHAR(20) NOT NULL, -- FOREIGN KEY ------
+    Company_name VARCHAR(20) NOT NULL, 
     Office VARCHAR(20) NOT NULL,
     Contact_information VARCHAR(20) UNIQUE NOT NULL,
     Department_staff VARCHAR(50) NOT NULL,
@@ -149,16 +149,16 @@ CREATE TABLE IF NOT EXISTS T4_Office (
 	Address VARCHAR(20) NOT NULL,
 	Admin_cost INT NOT NULL,
 	Staff VARCHAR(50) NOT NULL,
-    Department_name VARCHAR(20) NOT NULL, -- FOREIGN KEY ------
-    Company_name VARCHAR(20) NOT NULL -- FOREIGN KEY ------
+    Department_name VARCHAR(20) NOT NULL, 
+    Company_name VARCHAR(20) NOT NULL 
 );
 
 -- INSERTED
 CREATE TABLE IF NOT EXISTS T4_Vehicle_service (
     Vehicle_service VARCHAR(20) PRIMARY KEY,
-    Vehicle_id VARCHAR(20) NOT NULL, -- FOREIGN KEY ----
-    Cust_id VARCHAR(20) NOT NULL, -- FOREIGN KEY ----
-    Department_name CHAR(20) NOT NULL, -- FOREIGN KEY -----
+    Vehicle_id VARCHAR(20) NOT NULL, 
+    Cust_id VARCHAR(20) NOT NULL,
+    Department_name CHAR(20) NOT NULL, 
     Vehicle_service_address VARCHAR(20) NOT NULL,
     Vehicle_service_contact VARCHAR(20) UNIQUE NOT NULL,
     Vehicle_service_incharge CHAR(20) NOT NULL,
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS T4_Product (
     Product_number VARCHAR(20) PRIMARY KEY,
     Product_price INT NOT NULL,
     Product_type CHAR(15) NOT NULL,
-    Company_name VARCHAR(20) NOT NULL -- FOREIGN KEY -----  
+    Company_name VARCHAR(20) NOT NULL
 );
 
 -- INSERTED
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS T4_Insurance_company (
 CREATE TABLE IF NOT EXISTS T4_Receipt
 (
 	RECEIPT_ID VARCHAR(20) PRIMARY KEY,
-    PREMIUM_PAYMENT_ID VARCHAR(20),  -- NOT NULL
+    PREMIUM_PAYMENT_ID VARCHAR(20),
     CUST_ID VARCHAR(20) NOT NULL,
     COST INT NOT NULL,
     TIME DATE NOT NULL,
@@ -254,9 +254,6 @@ ADD FOREIGN KEY (VEHICLE_ID) REFERENCES T4_Vehicle(VEHICLE_ID);
 ALTER TABLE T4_Quote
 ADD FOREIGN KEY (PRODUCT_ID) REFERENCES T4_Product(Product_Number);
 
--- Removed foreign key Reciept ID from Premium Payments
--- ALTER TABLE T4_Premium_Payment
--- ADD FOREIGN KEY (RECEIPT_ID) REFERENCES T4_Receipt(RECEIPT_ID);
 
 ALTER TABLE T4_Claim
 ADD FOREIGN KEY (AGREEMENT_ID) REFERENCES T4_Insurance_Policy(AGREEMENT_ID); 
@@ -629,20 +626,6 @@ INSERT INTO T4_INSURANCE_POLICY_COVERAGE VALUES
 ('400014','800014'),
 ('400015','800015');
 
-
--- TO RUN THE UPDATES, INCLUDE THE SAFE MODE CHANGES TO CHANGE ALL ROWS TOO
--- CAN ADD MORE UPDATES FEASIBLY
-
--- END EXECUTION HERE TO RETURN TO SAFE MODE -- PLEASE DO NOT IGNORE THIS LINE
-
--- TO RUN THE UPDATES, INCLUDE THE SAFE MODE CHANGES TO CHANGE ALL ROWS TOO
--- CAN ADD MORE UPDATES FEASIBLY
--- SET SQL_SAFE_UPDATES = 0;
-
-
--- SET SQL_SAFE_UPDATES = 1;
--- END EXECUTION HERE TO RETURN TO SAFE MODE -- PLEASE DO NOT IGNORE THIS LINE
-
 -- 1
 SELECT T4_Customer.*,T4_Vehicle.* 
 FROM T4_Customer
@@ -651,140 +634,20 @@ ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
 WHERE T4_Customer.CUST_ID IN
 (SELECT CUST_ID FROM t4_claim
 WHERE INCIDENT_ID IS NOT NULL
-AND CLAIM_STATUS LIKE "PENDING");
-
-
-
-SELECT T4_Customer.*,T4_Vehicle.* 
-FROM T4_Customer
-INNER JOIN T4_Claim_Settlement
-ON T4_Claim_Settlement.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_Vehicle
-ON T4_Claim_Settlement.Vehicle_ID = T4_Vehicle.Vehicle_ID
-INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
-WHERE T4_Claim.INCIDENT_ID IS NOT NULL
-AND T4_Claim.CLAIM_STATUS LIKE "PENDING";
+AND CLAIM_STATUS LIKE "PENDING");  
 
 -- 2
-SET @cust_id_sum = (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer);
-
-SELECT *
-FROM T4_Customer
-JOIN T4_Premium_Payment
-ON T4_Customer.CUST_ID = T4_Premium_Payment.Cust_ID
-HAVING PREMIUM_PAYMENT_AMOUNT > @cust_id_sum;
 
 
--- 3
-DELIMITER $$
-CREATE FUNCTION product_count(comp_name VARCHAR(20))
-RETURNS INTEGER
-DETERMINISTIC
 
-BEGIN
-    DECLARE prod_count INTEGER;
-    SET prod_count = 
-    (SELECT COUNT(Product_number) FROM T4_Product
-     WHERE Company_name = comp_name);
 
-    RETURN prod_count;
-END; $$
 
-DELIMITER $$
-CREATE FUNCTION department_count(comp_name VARCHAR(20))
-RETURNS INTEGER
-DETERMINISTIC
 
-BEGIN
-    DECLARE dept_count INTEGER;
-    SET dept_count = 
-    (SELECT COUNT(Department_name) FROM t4_department
-     WHERE Company_name = comp_name);
 
-    RETURN dept_count;
-END; $$
 
-DELIMITER $$
-CREATE FUNCTION department_location_count(comp_name VARCHAR(20))
-RETURNS INTEGER
-DETERMINISTIC
 
-BEGIN
-    DECLARE loc_count INTEGER;
-    SET loc_count = 
-    (SELECT COUNT(DISTINCT(Address)) FROM t4_office
-     WHERE Company_name = comp_name);
-
-    RETURN loc_count;
-END; $$
-
-SELECT T4_Insurance_Company.*
-FROM T4_Insurance_Company
-WHERE product_count(Company_name) > department_count(Company_name)
-AND department_location_count(Company_name) > 1;
-
--- 5
-SELECT T4_Customer.*
-FROM T4_Customer
-LEFT JOIN T4_Premium_Payment
-ON T4_Customer.CUST_ID = T4_Premium_Payment.CUST_ID  
-WHERE PREMIUM_PAYMENT_AMOUNT > ALL (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer);
 
 -- 4
-SELECT T4_Customer.*
-FROM T4_Customer
-INNER JOIN T4_Vehicle
-ON T4_Vehicle.Cust_id = T4_Customer.CUST_ID
-INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Customer.CUST_ID
-INNER JOIN T4_Insurance_policy
-ON T4_Insurance_policy.Cust_id = T4_Customer.CUST_ID
-INNER JOIN T4_Insurance_Policy_Coverage
-ON T4_Insurance_Policy_Coverage.AGREEMENT_ID = T4_Insurance_policy.Agreement_id
-INNER JOIN T4_Coverage
-ON T4_Coverage.COVERAGE_ID = T4_Insurance_Policy_Coverage.COVERAGE_ID
-INNER JOIN T4_Claim_Settlement
-ON T4_Claim_Settlement.CLAIM_ID = T4_Claim.CLAIM_ID
-WHERE T4_Claim.CLAIM_AMOUNT < T4_Coverage.COVERAGE_AMOUNT
-AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID AS UNSIGNED) + 
-                                    CAST(T4_Vehicle.VEHICLE_ID AS UNSIGNED) +
-                                    CAST(T4_Claim.CLAIM_ID AS UNSIGNED) +
-                                    CAST(T4_Customer.CUST_ID AS UNSIGNED));
--- QUERY 4
-SELECT *
-FROM T4_Customer
-INNER JOIN T4_Premium_Payment
-ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_Vehicle
-ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
-INNER JOIN T4_Claim_Settlement
-ON T4_Claim_Settlement.VEHICLE_ID = T4_Vehicle.Vehicle_id
-INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
-INNER JOIN T4_Incident
-ON T4_Incident.INCIDENT_ID = t4_claim.INCIDENT_ID
-GROUP BY T4_Vehicle.Cust_id
-HAVING COUNT(T4_Vehicle.Vehicle_ID) > 1;
-AND T4_Premium_Payment.RECEIPT_ID IS NULL
-AND T4_Incident.INCIDENT_TYPE LIKE "Accident";
-
-SELECT *
-FROM T4_Customer
-INNER JOIN T4_Premium_Payment
-ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_incident_report
-ON T4_incident_report.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_incident
-ON T4_incident.INCIDENT_ID = T4_incident_report.INCIDENT_ID
-WHERE T4_Premium_Payment.RECEIPT_ID IS NULL
-AND T4_Incident.INCIDENT_TYPE LIKE "Accident"
-AND T4_Customer.CUST_ID IN 
-(SELECT Cust_ID FROM T4_Vehicle 
-GROUP BY T4_Vehicle.Cust_ID
-HAVING COUNT(Cust_ID) > 1);
-
--- 4 final
 SELECT C.*
 FROM T4_CUSTOMER C, T4_PREMIUM_PAYMENT PP, T4_INCIDENT_REPORT IR, T4_INCIDENT I
 WHERE PP.CUST_ID = IR.CUST_ID AND
@@ -796,21 +659,4 @@ WHERE PP.CUST_ID = IR.CUST_ID AND
 	  (SELECT C.Cust_ID FROM T4_Vehicle 
 	  GROUP BY T4_Vehicle.Cust_ID
 	  HAVING COUNT(Cust_ID) > 1);
-      
-      
-
-
-SELECT *
-FROM T4_Customer
-WHERE T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_incident_report
-ON T4_incident_report.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_incident
-ON T4_incident.INCIDENT_ID = T4_incident_report.INCIDENT_ID
-WHERE T4_Premium_Payment.RECEIPT_ID IS NULL
-AND T4_Incident.INCIDENT_TYPE LIKE "Accident"
-AND T4_Customer.CUST_ID IN 
-(SELECT Cust_ID FROM T4_Vehicle 
-GROUP BY T4_Vehicle.Cust_ID
-HAVING COUNT(Cust_ID) > 1);
 
