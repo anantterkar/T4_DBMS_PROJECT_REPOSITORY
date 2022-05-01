@@ -14,6 +14,13 @@ WHERE T4_Customer.CUST_ID IN
 WHERE INCIDENT_ID IS NOT NULL
 AND CLAIM_STATUS LIKE "PENDING");
 
+SELECT C.*, V.*, CL.INCIDENT_ID, CL.CLAIM_STATUS
+FROM T4_Customer C, T4_Vehicle V, T4_Claim CL
+WHERE CL.CUST_ID = C.CUST_ID AND
+	  V.CUST_ID = C.CUST_ID AND
+      CL.INCIDENT_ID IS NOT NULL AND
+      CL.CLAIM_STATUS LIKE "PENDING";
+
 -- NOTE: This returns ALL the vehicles the customer owns irrespective of which of his/her
 -- vehicle was involved in the incident.
 -- To get the specific vehicle/s,the claim_settlement table must be used
