@@ -747,7 +747,7 @@ AND department_location_count(Company_name) > 1;
 
 
 
--- 4 ----------------------------------------------------------------------
+-- 4 
 
 -- Select Customers who have more than one Vehicle, 
 -- where the premium for one of the
@@ -793,7 +793,7 @@ HAVING COUNT(Cust_ID) > 1);
 -- 5
 -- Select all vehicles which have premium more than its vehicle number
 -- Premium Payments are linked on the Customer and not vehicles
----------------------------------------------------------------------------------
+
 DELIMITER $$
 CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
 RETURNS INTEGER
@@ -805,7 +805,7 @@ BEGIN
     CAST(CONCAT(SUBSTR(vehicle_num,3,2),SUBSTR(vehicle_num,7,4)) AS UNSIGNED);
     RETURN abs_inst;
 END; $$
-----------------------------------------------------------------------------------
+
 SELECT T4_Vehicle.*
 FROM T4_Vehicle
 INNER JOIN T4_Customer
@@ -829,7 +829,7 @@ WHERE C.Cust_ID = V.Cust_ID AND
 -- INNER JOIN T4_Premium_Payment
 -- ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
 -- WHERE CAST(T4_Vehicle.Vehicle_number AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
------------------------------------------------------------------------------------
+
 
 
 
@@ -860,7 +860,7 @@ AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID
                                     CAST(T4_Customer.CUST_ID AS UNSIGNED));
 
 SELECT C.*
-FROM T4_Customer C, T4_Vehicle V, T4_Claim CL, T4_Insurance_policy IP, T4_Insurance_Policy_Coverage IPC, T4_Coverage CV, T4_Claim_Settlement CLAIM_SETTLEMENT_ID
+FROM T4_Customer C, T4_Vehicle V, T4_Claim CL, T4_Insurance_policy IP, T4_Insurance_Policy_Coverage IPC, T4_Coverage CV, T4_Claim_Settlement CS
 WHERE V.Cust_id = C.CUST_ID AND
       CL.CUST_ID = C.CUST_ID AND
       IP.Cust_id = C.CUST_ID AND
@@ -875,7 +875,7 @@ WHERE V.Cust_id = C.CUST_ID AND
 
 
 
-------------------------------------------------------------------------------------------------
+
 
 
 
