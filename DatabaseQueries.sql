@@ -178,6 +178,12 @@ INNER JOIN T4_Premium_Payment
 ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
 WHERE vehicle_number_convert(T4_Vehicle.Vehicle_number) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
 
+SELECT V.*
+FROM T4_Vehicle V, T4_Customer C, T4_Premium_Payment PP
+WHERE C.Cust_ID = V.Cust_ID AND
+      PP.Cust_ID = C.Cust_ID AND
+      vehicle_number_convert(V.Vehicle_number) < PP.PREMIUM_PAYMENT_AMOUNT;
+
 -- In Case Vehicle Number is an INTEGER value
 
 -- SELECT T4_Vehicle.*
@@ -212,5 +218,21 @@ AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID
                                     CAST(T4_Vehicle.VEHICLE_ID AS UNSIGNED) +
                                     CAST(T4_Claim.CLAIM_ID AS UNSIGNED) +
                                     CAST(T4_Customer.CUST_ID AS UNSIGNED));
+
+SELECT C.*
+FROM T4_Customer C, T4_Vehicle V, T4_Claim CL, T4_Insurance_policy IP, T4_Insurance_Policy_Coverage IPC, T4_Coverage CV, T4_Claim_Settlement CLAIM_SETTLEMENT_ID
+WHERE V.Cust_id = C.CUST_ID AND
+      CL.CUST_ID = C.CUST_ID AND
+      IP.Cust_id = C.CUST_ID AND
+      IPC.AGREEMENT_ID = IP.Agreement_id AND
+      CV.COVERAGE_ID = IPC.COVERAGE_ID AND
+      CS.CLAIM_ID = CL.CLAIM_ID AND
+      CL.CLAIM_AMOUNT < CV.COVERAGE_AMOUNT AND
+      CV.COVERAGE_AMOUNT > ( CAST(CS.CLAIM_SETTLEMENT_ID AS UNSIGNED) + 
+                                    CAST(V.VEHICLE_ID AS UNSIGNED) +
+                                    CAST(CL.CLAIM_ID AS UNSIGNED) +
+                                    CAST(C.CUST_ID AS UNSIGNED));
+
+
 
 ------------------------------------------------------------------------------------------------
