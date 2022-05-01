@@ -626,37 +626,8 @@ INSERT INTO T4_INSURANCE_POLICY_COVERAGE VALUES
 ('400014','800014'),
 ('400015','800015');
 
--- 1
-SELECT T4_Customer.*,T4_Vehicle.* 
-FROM T4_Customer
-INNER JOIN T4_Vehicle
-ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
-WHERE T4_Customer.CUST_ID IN
-(SELECT CUST_ID FROM t4_claim
-WHERE INCIDENT_ID IS NOT NULL
-AND CLAIM_STATUS LIKE "PENDING");  
-
--- 2
 
 
 
-
-
-
-
-
-
-
--- 4
-SELECT C.*
-FROM T4_CUSTOMER C, T4_PREMIUM_PAYMENT PP, T4_INCIDENT_REPORT IR, T4_INCIDENT I
-WHERE PP.CUST_ID = IR.CUST_ID AND
-	  IR.CUST_ID = C.CUST_ID AND
-      I.INCIDENT_ID = IR.INCIDENT_ID AND
-      PP.RECEIPT_ID IS NULL AND
-      I.INCIDENT_TYPE LIKE "Accident" AND
-      C.CUST_ID IN 
-	  (SELECT C.Cust_ID FROM T4_Vehicle 
-	  GROUP BY T4_Vehicle.Cust_ID
-	  HAVING COUNT(Cust_ID) > 1);
+------------------------------------------------------------------------------------------------
 
