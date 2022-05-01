@@ -1,3 +1,5 @@
+-- I haved removed the part where we were manually inserting using cases.
+
 CREATE DATABASE IF NOT EXISTS T4_Car_Insurance_DB;
 
 USE T4_Car_Insurance_DB;
