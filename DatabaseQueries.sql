@@ -55,7 +55,7 @@ DETERMINISTIC
 BEGIN
     DECLARE cust_id_summation INTEGER;
     SET cust_id_summation =
-    SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer;
+    (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer);
 
     RETURN cust_id_summation;
 END; $$
