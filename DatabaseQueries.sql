@@ -114,24 +114,36 @@ AND department_location_count(Company_name) > 1;
 -- Vehicles is not paid and it is involved in accident
 
 -- i.e the same vehicle MUST have both unpaid premium and an incident recor
--- there is no boolean confirming premium payment so it is verified using only the date
+-- there is no boolean confirming premium payment so it is verified using recipt id
 
-SELECT T4_Customer.*
+SELECT C.*
+FROM T4_CUSTOMER C, T4_PREMIUM_PAYMENT PP, T4_INCIDENT_REPORT IR, T4_INCIDENT I
+WHERE PP.CUST_ID = IR.CUST_ID AND
+	  IR.CUST_ID = C.CUST_ID AND
+      I.INCIDENT_ID = IR.INCIDENT_ID AND
+      PP.RECEIPT_ID IS NULL AND
+      I.INCIDENT_TYPE LIKE "Accident" AND
+      C.CUST_ID IN 
+	  (SELECT C.Cust_ID FROM T4_Vehicle 
+	  GROUP BY T4_Vehicle.Cust_ID
+	  HAVING COUNT(Cust_ID) > 1);
+
+
+
+SELECT *
 FROM T4_Customer
 INNER JOIN T4_Premium_Payment
 ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
-INNER JOIN T4_Vehicle
-ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
-INNER JOIN T4_Claim_Settlement
-ON T4_Claim_Settlement.VEHICLE_ID = T4_Vehicle.Vehicle_id
-INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
-INNER JOIN T4_Incident
-ON T4_Incident.INCIDENT_ID = t4_claim.INCIDENT_ID
-WHERE T4_Premium_Payment.RECEIPT_ID IS NULL   -- i.e. Payment is not done hence recipt not generated
-AND T4_Incident.INCIDENT_TYPE LIKE "ACCIDENT"
-GROUP BY T4_Vehicle.Cust_id
-HAVING COUNT(T4_Vehicle.Cust_id) > 1;
+INNER JOIN T4_incident_report
+ON T4_incident_report.CUST_ID = T4_Customer.CUST_ID
+INNER JOIN T4_incident
+ON T4_incident.INCIDENT_ID = T4_incident_report.INCIDENT_ID
+WHERE T4_Premium_Payment.RECEIPT_ID IS NULL
+AND T4_Incident.INCIDENT_TYPE LIKE "Accident"
+AND T4_Customer.CUST_ID IN 
+(SELECT Cust_ID FROM T4_Vehicle 
+GROUP BY T4_Vehicle.Cust_ID
+HAVING COUNT(Cust_ID) > 1);
 
 -- THE WHERE STATEMENT CAN BE REPLACED TO SEARCH USING DATE IF NEEDED
 
@@ -145,6 +157,7 @@ RETURNS INTEGER
 DETERMINISTIC
 
 BEGIN
+    DECLARE abs_inst INTEGER; 
     SET abs_inst = 
     CAST(CONCAT(SUBSTR(vehicle_num,3,2),SUBSTR(vehicle_num,7,4)) AS UNSIGNED);
     RETURN abs_inst;
@@ -178,7 +191,7 @@ FROM T4_Customer
 INNER JOIN T4_Vehicle
 ON T4_Vehicle.Cust_id = T4_Customer.CUST_ID
 INNER JOIN T4_Claim
-ON T4_Claim.CLAIM_ID = T4_Customer.CUST_ID
+ON T4_Claim.CUST_ID = T4_Customer.CUST_ID
 INNER JOIN T4_Insurance_policy
 ON T4_Insurance_policy.Cust_id = T4_Customer.CUST_ID
 INNER JOIN T4_Insurance_Policy_Coverage
@@ -194,5 +207,3 @@ AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID
                                     CAST(T4_Customer.CUST_ID AS UNSIGNED));
 
 ------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------
----Validity Test remainig, to be done after complete addition of DATA---------------------------
