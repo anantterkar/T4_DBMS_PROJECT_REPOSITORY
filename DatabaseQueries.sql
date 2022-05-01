@@ -169,25 +169,7 @@ HAVING COUNT(T4_Vehicle.Cust_id) > 1;
 -- Premium Payments are linked on the Customer and not vehicles???????
 -- Diskushun Riqvirud
 
-DELIMITER $$
-CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
-RETURNS INTEGER
-DETERMINISTIC
 
-BEGIN
-    DECLARE abs_inst INTEGER;
-    SET abs_inst = 
-     CAST( (REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE
-     (vehicle_num,'A','') ,'B','') ,'C','') ,'D','') ,'E','') 
-     ,'F','') ,'G','') ,'H','') ,'I','') ,'J','') ,'K','') ,'L','') ,'M','') 
-     ,'N','') ,'O','') ,'P','') ,'Q','') ,'R','') ,'S','') ,'T','') ,'U','') 
-     ,'V','') ,'W','') ,'X','') ,'Y','') ,'Z','')) AS UNSIGNED);
-
-    RETURN abs_inst;
-END; $$
 -------------------------------------------------------------------------------
 DELIMITER $$
 CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
