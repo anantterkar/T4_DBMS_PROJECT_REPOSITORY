@@ -41,7 +41,7 @@ DETERMINISTIC
 BEGIN
     DECLARE cust_id_summation INTEGER;
     SET cust_id_summation =
-    SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer;
+    (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Customer);
 
     RETURN cust_id_summation;
 END; $$
@@ -194,3 +194,5 @@ AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID
                                     CAST(T4_Customer.CUST_ID AS UNSIGNED));
 
 ------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+---Validity Test remainig, to be done after complete addition of DATA---------------------------
