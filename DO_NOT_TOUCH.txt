@@ -417,3 +417,41 @@ SET SQL_SAFE_UPDATES = 1;
 -- END EXECUTION HERE TO RETURN TO SAFE MODE -- PLEASE DO NOT IGNORE THIS LINE
 
 
+
+DELIMITER $$
+CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
+RETURNS INTEGER
+DETERMINISTIC
+
+BEGIN
+    DECLARE abs_inst INTEGER;
+    SET abs_inst = 
+     CAST( (REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
+     REPLACE( REPLACE( REPLACE( REPLACE
+     (vehicle_num,'A','') ,'B','') ,'C','') ,'D','') ,'E','') 
+     ,'F','') ,'G','') ,'H','') ,'I','') ,'J','') ,'K','') ,'L','') ,'M','') 
+     ,'N','') ,'O','') ,'P','') ,'Q','') ,'R','') ,'S','') ,'T','') ,'U','') 
+     ,'V','') ,'W','') ,'X','') ,'Y','') ,'Z','')) AS UNSIGNED);
+
+    RETURN abs_inst;
+END; $$
+
+-- 3 ---------------------------------------------------------------------------
+
+-- Retrieve Company details whose number of products is greater than departments,
+-- where the departments are located in more than one location
+
+SELECT T4_Insurance_Company.*
+FROM T4_Insurance_Company
+INNER JOIN T4_Product
+ON T4_Insurance_Company.Company_name = T4_Product.Company_name
+INNER JOIN T4_Department
+ON T4_Insurance_Company.Company_name = T4_Department.Company_name
+INNER JOIN T4_Office
+ON T4_Insurance_Company.Company_name = T4_Office.Company_name
+GROUP BY T4_Product.Company_name, T4_Department.Company_name
+HAVING COUNT(T4_Product.Company_name) > COUNT(T4_Department.Company_name)
+AND COUNT(DISTINCT(T4_Office.Address)) > 1;
+-- not working cuz im comparing values on the inner joins

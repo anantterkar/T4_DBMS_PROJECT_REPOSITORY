@@ -12,30 +12,16 @@ ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
 WHERE T4_Customer.CUST_ID IN
 (SELECT CUST_ID FROM t4_claim
 WHERE INCIDENT_ID IS NOT NULL
-AND CLAIM_STATUS LIKE "PENDING");        -- Input DATA capitalization unknown
+AND CLAIM_STATUS LIKE "PENDING");
 
 -- NOTE: This returns ALL the vehicles the customer owns irrespective of which of his/her
 -- vehicle was involved in the incident.
 -- To get the specific vehicle/s,the claim_settlement table must be used
 
--- SELECT T4_Customer.*,T4_Vehicle.* 
--- FROM T4_Customer
--- INNER JOIN T4_Vehicle
--- ON T4_Customer.CUST_ID = T4_Vehicle.Cust_id
--- INNER JOIN T4_Claim_Settlement
--- ON T4_Claim_Settlement.CUST_ID = T4_Customer.CUST_ID
--- INNER JOIN T4_Claim
--- ON T4_Claim.CLAIM_ID = T4_Claim_Settlement.CLAIM_ID
--- WHERE T4_Claim.INCIDENT_ID IS NOT NULL
--- AND T4_Claim.CLAIM_STATUS LIKE "PENDING";
-
 -- 2
 
 -- Retrieve customer details who has premium payment amount greater than the sum of all
 -- the customerIds in the database
-
--- ASSUMPTION MADE[SUBJECTED TO CHANGE] - SUM of the LITERAL customer IDs is considered
--- and the IDs are +ve Integers
 
 SELECT T4_Customer.*
 FROM T4_Customer
@@ -45,7 +31,7 @@ WHERE PREMIUM_PAYMENT_AMOUNT > (SELECT SUM(CAST(CUST_ID AS UNSIGNED)) FROM T4_Cu
 
 -- This method requries the subquery to be (unnecessarily) run for every iteration
 
--- Faster Method
+-- Faster Method----[Storing the Sum Value in a Variable to avoid re-running the subquery]
 
 DELIMITER $$
 CREATE FUNCTION premium_over_cust_id_summation()
@@ -60,7 +46,7 @@ BEGIN
     RETURN cust_id_summation;
 END; $$
 
-SELECT @cust_id_sum :=  premium_over_cust_id_summation();
+SET @cust_id_sum :=  premium_over_cust_id_summation();
 
 SELECT T4_Customer.*
 FROM T4_Customer
@@ -68,25 +54,10 @@ RIGHT JOIN T4_Premium_Payment
 ON T4_Customer.CUST_ID = T4_Premium_Payment.CUST_ID  
 WHERE PREMIUM_PAYMENT_AMOUNT > @cust_id_sum;
 
--- 3
+-- 3 ---------------------------------------------------------------------------
 
--- Retrieve Company details whose number of products is greater than departments, where
--- the departments are located in more than one location
-
--- Address IS assumed to be the column storing LOCATION
-
-SELECT T4_Insurance_Company.*
-FROM T4_Insurance_Company
-INNER JOIN T4_Product
-ON T4_Insurance_Company.Company_name = T4_Product.Company_name
-INNER JOIN T4_Department
-ON T4_Insurance_Company.Company_name = T4_Department.Company_name
-INNER JOIN T4_Office
-ON T4_Insurance_Company.Company_name = T4_Office.Company_name
-GROUP BY T4_Product.Company_name, T4_Department.Company_name
-HAVING COUNT(T4_Product.Company_name) > COUNT(T4_Department.Company_name)
-AND COUNT(DISTINCT(T4_Office.Address)) > 1;
--- not working cuz im comparing values on the inner joins
+-- Retrieve Company details whose number of products is greater than departments,
+-- where the departments are located in more than one location
 
 DELIMITER $$
 CREATE FUNCTION product_count(comp_name VARCHAR(20))
@@ -136,7 +107,7 @@ WHERE product_count(Company_name) > department_count(Company_name)
 AND department_location_count(Company_name) > 1;
 
 
--- 4
+-- 4 ----------------------------------------------------------------------
 
 -- Select Customers who have more than one Vehicle, 
 -- where the premium for one of the
@@ -166,29 +137,8 @@ HAVING COUNT(T4_Vehicle.Cust_id) > 1;
 
 -- 5
 -- Select all vehicles which have premium more than its vehicle number
--- Premium Payments are linked on the Customer and not vehicles???????
--- Diskushun Riqvirud
-
-DELIMITER $$
-CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
-RETURNS INTEGER
-DETERMINISTIC
-
-BEGIN
-    DECLARE abs_inst INTEGER;
-    SET abs_inst = 
-     CAST( (REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE( REPLACE(
-     REPLACE( REPLACE( REPLACE( REPLACE
-     (vehicle_num,'A','') ,'B','') ,'C','') ,'D','') ,'E','') 
-     ,'F','') ,'G','') ,'H','') ,'I','') ,'J','') ,'K','') ,'L','') ,'M','') 
-     ,'N','') ,'O','') ,'P','') ,'Q','') ,'R','') ,'S','') ,'T','') ,'U','') 
-     ,'V','') ,'W','') ,'X','') ,'Y','') ,'Z','')) AS UNSIGNED);
-
-    RETURN abs_inst;
-END; $$
--------------------------------------------------------------------------------
+-- Premium Payments are linked on the Customer and not vehicles
+---------------------------------------------------------------------------------
 DELIMITER $$
 CREATE FUNCTION vehicle_number_convert(vehicle_num VARCHAR(20))
 RETURNS INTEGER
@@ -199,7 +149,7 @@ BEGIN
     CAST(CONCAT(SUBSTR(vehicle_num,3,2),SUBSTR(vehicle_num,7,4)) AS UNSIGNED);
     RETURN abs_inst;
 END; $$
-
+----------------------------------------------------------------------------------
 SELECT T4_Vehicle.*
 FROM T4_Vehicle
 INNER JOIN T4_Customer
@@ -208,6 +158,8 @@ INNER JOIN T4_Premium_Payment
 ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
 WHERE vehicle_number_convert(T4_Vehicle.Vehicle_number) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
 
+-- In Case Vehicle Number is an INTEGER value
+
 -- SELECT T4_Vehicle.*
 -- FROM T4_Vehicle
 -- INNER JOIN T4_Customer
@@ -215,6 +167,7 @@ WHERE vehicle_number_convert(T4_Vehicle.Vehicle_number) < T4_Premium_Payment.PRE
 -- INNER JOIN T4_Premium_Payment
 -- ON T4_Premium_Payment.CUST_ID = T4_Customer.CUST_ID
 -- WHERE CAST(T4_Vehicle.Vehicle_number AS UNSIGNED) < T4_Premium_Payment.PREMIUM_PAYMENT_AMOUNT;
+-----------------------------------------------------------------------------------
 
 -- 6
 -- Retrieve Customer details whose Claim Amount is less than Coverage Amount and Claim
@@ -241,4 +194,3 @@ AND T4_Coverage.COVERAGE_AMOUNT > ( CAST(T4_Claim_Settlement.CLAIM_SETTLEMENT_ID
                                     CAST(T4_Customer.CUST_ID AS UNSIGNED));
 
 ------------------------------------------------------------------------------------------------
----Validity Test remainig, to be done after complete addition of DATA---------------------------
